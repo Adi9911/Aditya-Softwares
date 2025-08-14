@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}AI & ML Support - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert support for Artificial Intelligence (AI) and Machine Learning (ML) solutions, including development, integration, and optimization.{% endblock %}
+
+{% block canonical_url %}{{ url_for("ai_ml_support", _external=True) }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("services") }}">Services</a>
+            <span>/</span>
+            <a href="{{ url_for("tech_support") }}">Tech Support</a>
+            <span>/</span>
+            <span>AI & ML Support</span>
+        </div>
+        <h1>Artificial Intelligence & Machine Learning Support</h1>
+        <p>Empowering your business with intelligent solutions.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Our AI & ML Support Services</h2>
+        <p>Aditya Softwares offers comprehensive support for businesses looking to leverage Artificial Intelligence and Machine Learning technologies. From initial consultation to deployment and ongoing maintenance, we help you integrate intelligent solutions into your operations.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_ml.png") }}" alt="AI ML Development">
+                <h3>AI/ML Solution Development</h3>
+                <p>Custom development of AI and ML models tailored to your specific business needs and data.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="AI ML Integration">
+                <h3>Integration & Implementation</h3>
+                <p>Seamless integration of AI/ML solutions with your existing systems and workflows.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_robotics.png") }}" alt="AI ML Optimization">
+                <h3>Performance Optimization</h3>
+                <p>Fine-tuning and optimizing AI/ML models for improved accuracy, speed, and efficiency.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_server.png") }}" alt="AI ML Consulting">
+                <h3>Consulting & Strategy</h3>
+                <p>Expert guidance on AI/ML strategy, feasibility studies, and technology adoption roadmaps.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Applications of AI & ML</h2>
+        <div class="problem-solution">
+            <h3>Data Analysis & Prediction</h3>
+            <p>Utilize AI/ML for advanced data analysis, predictive modeling, and forecasting to gain actionable insights.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Automation & Efficiency</h3>
+            <p>Automate repetitive tasks, optimize processes, and enhance operational efficiency with intelligent systems.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Customer Experience Enhancement</h3>
+            <p>Improve customer interactions through AI-powered chatbots, personalized recommendations, and sentiment analysis.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Security & Fraud Detection</h3>
+            <p>Enhance security measures and detect fraudulent activities with AI-driven anomaly detection systems.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares for AI & ML Support?</h2>
+        <ul>
+            <li><strong>Cutting-Edge Expertise:</strong> Our team stays updated with the latest AI/ML advancements.</li>
+            <li><strong>Tailored Solutions:</strong> We develop solutions that are specifically designed for your business challenges.</li>
+            <li><strong>Data-Driven Approach:</strong> We focus on delivering measurable results and tangible business value.</li>
+            <li><strong>End-to-End Support:</strong> From concept to deployment and beyond, we provide comprehensive support.</li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Unlock the Power of AI & ML for Your Business!</h2>
+        <p>Ready to transform your operations with Artificial Intelligence and Machine Learning? Contact Aditya Softwares today.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

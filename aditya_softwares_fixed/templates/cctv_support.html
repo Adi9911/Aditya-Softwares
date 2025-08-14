@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}CCTV Support Services - Installation, Configuration, Maintenance | Aditya Softwares{% endblock %}
+
+{% block meta_description %}Professional CCTV support services including installation, configuration, maintenance, troubleshooting, and security camera system optimization.{% endblock %}
+
+{% block canonical_url %}/tech-support/cctv{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for('tech_support') }}">Technical Support</a>
+            <span>/</span>
+            <span>CCTV Support</span>
+        </div>
+        <h1>CCTV & Security Camera Support</h1>
+        <p>Professional CCTV installation, configuration, and maintenance services</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>CCTV Support Services</h2>
+        <p>Comprehensive CCTV and security camera support for homes and businesses. Our experts handle everything from installation to ongoing maintenance.</p>
+    </div>
+
+    <div class="tech-support-grid">
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_cctv.png') }}" alt="CCTV Installation">
+            <h3>CCTV Installation</h3>
+            <p>Professional installation of security cameras, DVR/NVR systems, and complete surveillance setups.</p>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_technology_1.png') }}" alt="System Configuration">
+            <h3>System Configuration</h3>
+            <p>Expert configuration of recording settings, motion detection, remote access, and mobile viewing.</p>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_server.png') }}" alt="Maintenance">
+            <h3>Maintenance & Repair</h3>
+            <p>Regular maintenance, troubleshooting, and repair services to keep your security system running optimally.</p>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_router.png') }}" alt="Network Setup">
+            <h3>Network Integration</h3>
+            <p>Network setup for IP cameras, remote monitoring, and integration with existing IT infrastructure.</p>
+        </div>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common CCTV Problem: Camera Not Recording</h3>
+        <p><strong>Problem:</strong> Security camera appears to be working but is not recording footage to the DVR/NVR.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check storage space on the DVR/NVR and clear old recordings if storage is full</li>
+            <li>Verify recording schedule settings and ensure cameras are set to record continuously or on motion</li>
+            <li>Check camera connections and ensure all cables are securely connected</li>
+            <li>Test camera functionality by viewing live feed and checking for any error messages</li>
+            <li>Restart the DVR/NVR system and check if recording resumes after reboot</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common CCTV Problem: Poor Image Quality</h3>
+        <p><strong>Problem:</strong> CCTV cameras are producing blurry, dark, or low-quality images.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Clean camera lenses with appropriate cleaning materials to remove dirt and smudges</li>
+            <li>Adjust camera focus and zoom settings for optimal image clarity</li>
+            <li>Check lighting conditions and install additional lighting if needed for night vision</li>
+            <li>Verify camera resolution settings and ensure they are set to maximum quality</li>
+            <li>Check for interference from other electronic devices and relocate if necessary</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common CCTV Problem: Remote Access Not Working</h3>
+        <p><strong>Problem:</strong> Unable to view CCTV cameras remotely through mobile app or web browser.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check internet connection on both the DVR/NVR and the viewing device</li>
+            <li>Verify port forwarding settings on the router for the CCTV system</li>
+            <li>Update mobile app or web browser to the latest version</li>
+            <li>Check firewall settings and ensure CCTV ports are not blocked</li>
+            <li>Reset network settings on the DVR/NVR and reconfigure remote access</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common CCTV Problem: Motion Detection Not Working</h3>
+        <p><strong>Problem:</strong> Motion detection alerts are not triggering when movement occurs in camera view.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check motion detection sensitivity settings and adjust to appropriate level</li>
+            <li>Verify motion detection zones are properly configured for areas of interest</li>
+            <li>Ensure motion detection is enabled in the camera or DVR/NVR settings</li>
+            <li>Check for obstructions or environmental factors affecting motion detection</li>
+            <li>Test motion detection by walking in front of the camera during different times</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common CCTV Problem: System Keeps Rebooting</h3>
+        <p><strong>Problem:</strong> DVR/NVR system randomly restarts or shuts down without warning.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check power supply and ensure it provides adequate wattage for all connected cameras</li>
+            <li>Verify all connections are secure and not causing power fluctuations</li>
+            <li>Check system temperature and ensure proper ventilation around the DVR/NVR</li>
+            <li>Update firmware to the latest version to fix known stability issues</li>
+            <li>Test with fewer cameras connected to isolate potential hardware conflicts</li>
+        </ol>
+    </div>
+
+    <div class="form-container">
+        <h2>Professional CCTV Services</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🏠 Residential Security</h3>
+                <p>Home security camera systems with mobile monitoring and cloud storage options.</p>
+            </div>
+            <div class="support-card">
+                <h3>🏢 Commercial Systems</h3>
+                <p>Enterprise-grade surveillance systems with advanced analytics and multi-site monitoring.</p>
+            </div>
+            <div class="support-card">
+                <h3>📱 Mobile Integration</h3>
+                <p>Remote viewing apps and notifications for real-time monitoring from anywhere.</p>
+            </div>
+            <div class="support-card">
+                <h3>☁️ Cloud Storage</h3>
+                <p>Secure cloud backup and storage solutions for your surveillance footage.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Need CCTV Support?</h2>
+        <p>Our security experts are ready to help with installation, configuration, or troubleshooting of your CCTV system.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for('contact') }}" class="cta-button">Get CCTV Support</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

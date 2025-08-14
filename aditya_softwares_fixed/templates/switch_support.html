@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Network Switch Support - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert network switch support, installation, configuration, and troubleshooting services for business networks.{% endblock %}
+
+{% block canonical_url %}{{ url_for("switch_support", _external=True) }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("services") }}">Services</a>
+            <span>/</span>
+            <a href="{{ url_for("network_support") }}">Network Support</a>
+            <span>/</span>
+            <span>Network Switch Support</span>
+        </div>
+        <h1>Network Switch Support & Configuration</h1>
+        <p>Optimizing your network infrastructure for seamless data flow.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Our Network Switch Support Services</h2>
+        <p>Aditya Softwares provides comprehensive support for network switches, including managed, unmanaged, PoE, and enterprise-grade switches. We ensure your network backbone is robust, efficient, and secure.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_switch.png") }}" alt="Switch Installation">
+                <h3>Installation & Setup</h3>
+                <p>Professional installation and configuration of network switches, including VLAN setup and port configuration.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_network.png") }}" alt="Switch Troubleshooting">
+                <h3>Troubleshooting & Repair</h3>
+                <p>Diagnosing and fixing common switch issues like network bottlenecks, connectivity problems, and port failures.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="Switch Firmware">
+                <h3>Firmware Updates & Security</h3>
+                <p>Updating switch firmware, configuring security policies, and implementing access control lists (ACLs).</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_server.png") }}" alt="Network Optimization">
+                <h3>Network Optimization</h3>
+                <p>Optimizing switch performance for high-speed data transfer, traffic management, and network segmentation.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Common Network Switch Problems We Fix</h2>
+        <div class="problem-solution">
+            <h3>Network Bottlenecks</h3>
+            <p>Identifying and resolving network congestion issues caused by misconfigured switches or insufficient bandwidth.</p>
+        
+        </div>
+        <div class="problem-solution">
+            <h3>Connectivity Issues</h3>
+            <p>Troubleshooting port failures, cable issues, and incorrect VLAN configurations preventing devices from connecting.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Security Vulnerabilities</h3>
+            <p>Addressing unauthorized access, port security breaches, and implementing measures to secure your network switches.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Configuration Errors</h3>
+            <p>Correcting misconfigurations that lead to network loops, broadcast storms, or improper data routing.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares for Network Switch Support?</h2>
+        <ul>
+            <li><strong>Advanced Network Expertise:</strong> Our technicians are highly skilled in complex network topologies and switch technologies.</li>
+            <li><strong>Enhanced Network Performance:</strong> We optimize your switches for maximum speed, reliability, and security.</li>
+            <li><strong>Proactive Monitoring:</strong> We can set up monitoring solutions to detect and prevent potential issues.</li>
+            <li><strong>Scalable Solutions:</strong> We help you design and implement network solutions that grow with your business.</li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Get Expert Network Switch Support Today!</h2>
+        <p>Ensure your network infrastructure is robust and efficient with professional network switch support from Aditya Softwares.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

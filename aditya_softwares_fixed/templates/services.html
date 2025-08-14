@@ -1,0 +1,331 @@
+{% extends "base.html" %}
+
+{% block title %}Professional IT Services - Software Development, Web Design, Technical Support | Aditya Softwares{% endblock %}
+
+{% block meta_description %}Comprehensive IT services including software development, web design, mobile app development, technical support, network solutions, AI/ML, cloud computing, and digital transformation services.{% endblock %}
+
+{% block canonical_url %}/services{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <span>Services</span>
+        </div>
+        <h1>Comprehensive IT Services Portfolio</h1>
+        <p>End-to-end technology solutions that drive business growth and digital transformation</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Complete Technology Solutions for Modern Business</h2>
+        <p>At Aditya Softwares, we offer a comprehensive portfolio of IT services designed to meet the diverse and evolving needs of modern businesses. From cutting-edge software development to reliable technical support, our services are crafted to drive operational efficiency, enhance productivity, and accelerate business growth in today's digital economy.</p>
+        
+        <p>Our service offerings span the entire technology spectrum, ensuring that we can serve as your complete technology partner. Whether you're a startup looking to establish your digital presence, a growing business seeking to scale your operations, or an enterprise requiring complex technology solutions, we have the expertise and resources to deliver exceptional results.</p>
+    </div>
+
+    <div class="tech-support-grid">
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_software.png') }}" alt="Software Development">
+            <h3>Custom Software Development</h3>
+            <p>Full-stack software development services including custom business applications, enterprise software solutions, web applications, desktop applications, and specialized software tools. We utilize modern programming languages, frameworks, and development methodologies to create robust, scalable, and maintainable software solutions that perfectly align with your business requirements.</p>
+            <a href="{{ url_for('enquiry') }}" class="support-link">Get Development Quote</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_technology_1.png') }}" alt="Web Design">
+            <h3>Web Design & Development</h3>
+            <p>Professional web design and development services including responsive websites, e-commerce platforms, content management systems, progressive web applications, and modern web portals. Our web solutions are optimized for performance, search engines, and user experience across all devices and browsers.</p>
+            <a href="{{ url_for('enquiry') }}" class="support-link">Get Web Quote</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_laptop.png') }}" alt="Mobile Development">
+            <h3>Mobile App Development</h3>
+            <p>Native and cross-platform mobile application development for iOS and Android platforms. We create user-friendly, feature-rich mobile apps that provide seamless user experiences and integrate perfectly with your existing business systems and workflows.</p>
+            <a href="{{ url_for('enquiry') }}" class="support-link">Get Mobile Quote</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_ai.png') }}" alt="AI & ML Services">
+            <h3>AI & Machine Learning Solutions</h3>
+            <p>Cutting-edge artificial intelligence and machine learning solutions including predictive analytics, natural language processing, computer vision, intelligent automation, chatbots, and data-driven decision support systems. We help businesses leverage AI to gain competitive advantages and improve operational efficiency.</p>
+            <a href="{{ url_for('ai_ml_support') }}" class="support-link">Explore AI Solutions</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_server.png') }}" alt="Cloud Services">
+            <h3>Cloud Computing Services</h3>
+            <p>Comprehensive cloud solutions including cloud migration, infrastructure setup, cloud-native application development, serverless computing, microservices architecture, and ongoing cloud management. We help businesses leverage the scalability, flexibility, and cost-effectiveness of cloud computing.</p>
+            <a href="{{ url_for('server_support') }}" class="support-link">Learn About Cloud</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_hardware.png') }}" alt="Technical Support">
+            <h3>Technical Support Services</h3>
+            <p>Comprehensive IT support services including hardware troubleshooting, software installation and configuration, system optimization, performance tuning, preventive maintenance, and 24/7 technical assistance. Our support services ensure optimal performance and reliability of your IT infrastructure.</p>
+            <a href="{{ url_for('tech_support') }}" class="support-link">Get Technical Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_router.png') }}" alt="Network Solutions">
+            <h3>Network Infrastructure Solutions</h3>
+            <p>Complete network design, implementation, and management services including LAN/WAN setup, wireless networks, network security, firewall configuration, VPN setup, and ongoing network monitoring and maintenance. We ensure reliable, secure, and high-performance network connectivity.</p>
+            <a href="{{ url_for('network_support') }}" class="support-link">Get Network Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_cctv.png') }}" alt="Security Solutions">
+            <h3>Cybersecurity Services</h3>
+            <p>Comprehensive cybersecurity solutions including security assessments, threat detection and response, security policy development, employee training, penetration testing, and ongoing security monitoring. We protect your business from cyber threats and ensure compliance with industry standards.</p>
+            <a href="{{ url_for('cctv_support') }}" class="support-link">Explore Security</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_printer.png') }}" alt="Digital Transformation">
+            <h3>Digital Transformation</h3>
+            <p>Strategic digital transformation services including business process automation, legacy system modernization, digital workflow optimization, and technology strategy consulting. We help businesses embrace digital technologies to improve efficiency and competitiveness.</p>
+            <a href="{{ url_for('enquiry') }}" class="support-link">Start Transformation</a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Service Excellence & Quality Assurance</h2>
+        <p>Our commitment to service excellence is reflected in every aspect of our operations. We have developed comprehensive quality assurance processes and service delivery methodologies that ensure consistent, high-quality results for every project and client engagement.</p>
+        
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🎯 Customized Solutions</h3>
+                <p>Every solution is carefully tailored to meet your specific business requirements, objectives, and constraints. We take the time to understand your unique challenges and design solutions that address your exact needs while providing room for future growth and scalability.</p>
+            </div>
+            <div class="support-card">
+                <h3>⚡ Agile Delivery</h3>
+                <p>We employ agile development methodologies and project management practices that ensure rapid delivery without compromising quality. Our iterative approach allows for continuous feedback, regular updates, and flexible adaptation to changing requirements throughout the project lifecycle.</p>
+            </div>
+            <div class="support-card">
+                <h3>🔧 Expert Team</h3>
+                <p>Our team consists of highly skilled and experienced professionals with deep expertise in the latest technologies, industry best practices, and emerging trends. We continuously invest in training and certification to ensure our team remains at the forefront of technological innovation.</p>
+            </div>
+            <div class="support-card">
+                <h3>🛡️ Quality Assurance</h3>
+                <p>Rigorous testing, quality control, and validation processes are integrated throughout our service delivery lifecycle. We employ comprehensive testing methodologies, code reviews, and quality checkpoints to ensure that every deliverable meets the highest standards of quality and reliability.</p>
+            </div>
+            <div class="support-card">
+                <h3>📞 Ongoing Support</h3>
+                <p>Our commitment to your success extends well beyond project delivery. We provide comprehensive post-delivery support, maintenance, and optimization services to ensure continued success and optimal performance of your technology solutions.</p>
+            </div>
+            <div class="support-card">
+                <h3>💰 Value-Driven Pricing</h3>
+                <p>Our pricing models are designed to provide exceptional value and return on investment. We offer transparent, competitive pricing with no hidden costs, and we work with you to find solutions that fit your budget while delivering maximum business value.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Comprehensive Service Packages</h2>
+        <p>We offer flexible service packages designed to meet the diverse needs and budgets of different types of organizations. Our packages can be customized and combined to create the perfect solution for your specific requirements.</p>
+        
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>Startup Accelerator Package</h3>
+                <p><strong>Perfect for new businesses and entrepreneurs</strong></p>
+                <div style="text-align: left; margin: 1rem 0;">
+                    <p><strong>Includes:</strong></p>
+                    <ul>
+                        <li>Professional website development with responsive design</li>
+                        <li>Domain registration and hosting setup</li>
+                        <li>Business email configuration and setup</li>
+                        <li>Basic SEO optimization and Google Analytics</li>
+                        <li>Social media integration and setup</li>
+                        <li>SSL certificate and basic security setup</li>
+                        <li>3 months of ongoing support and maintenance</li>
+                        <li>Training and documentation</li>
+                    </ul>
+                </div>
+                <a href="{{ url_for('enquiry') }}" class="support-link">Get Startup Quote</a>
+            </div>
+            
+            <div class="support-card">
+                <h3>Business Growth Package</h3>
+                <p><strong>Ideal for growing companies and SMBs</strong></p>
+                <div style="text-align: left; margin: 1rem 0;">
+                    <p><strong>Includes:</strong></p>
+                    <ul>
+                        <li>Custom web application development</li>
+                        <li>Database design and integration</li>
+                        <li>Payment gateway and e-commerce setup</li>
+                        <li>Advanced SEO and digital marketing tools</li>
+                        <li>Customer relationship management system</li>
+                        <li>Mobile-responsive design and optimization</li>
+                        <li>6 months of support and maintenance</li>
+                        <li>Performance monitoring and analytics</li>
+                    </ul>
+                </div>
+                <a href="{{ url_for('enquiry') }}" class="support-link">Get Business Quote</a>
+            </div>
+            
+            <div class="support-card">
+                <h3>Enterprise Solutions Package</h3>
+                <p><strong>Complete enterprise-grade solutions</strong></p>
+                <div style="text-align: left; margin: 1rem 0;">
+                    <p><strong>Includes:</strong></p>
+                    <ul>
+                        <li>Full-scale custom software development</li>
+                        <li>Cloud infrastructure design and implementation</li>
+                        <li>Enterprise security and compliance setup</li>
+                        <li>24/7 monitoring and support services</li>
+                        <li>Integration with existing enterprise systems</li>
+                        <li>Scalable architecture and performance optimization</li>
+                        <li>12 months of comprehensive support</li>
+                        <li>Dedicated account management and consulting</li>
+                    </ul>
+                </div>
+                <a href="{{ url_for('enquiry') }}" class="support-link">Get Enterprise Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Technology Stack & Expertise</h2>
+        <p>Our extensive technology expertise spans the full spectrum of modern software development, infrastructure management, and emerging technologies. We stay current with the latest technological advances to ensure our clients benefit from cutting-edge solutions.</p>
+        
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>Frontend Technologies</h3>
+                <p><strong>Modern UI/UX Development:</strong> HTML5, CSS3, JavaScript (ES6+), TypeScript, React.js, Angular, Vue.js, Svelte, Bootstrap, Tailwind CSS, Material-UI, Sass/SCSS, Webpack, Vite</p>
+            </div>
+            <div class="support-card">
+                <h3>Backend Technologies</h3>
+                <p><strong>Robust Server-Side Solutions:</strong> Python (Django, Flask, FastAPI), Node.js (Express.js, Nest.js), PHP (Laravel, Symfony), Java (Spring Boot), C# (.NET Core), Ruby (Rails), Go, Rust</p>
+            </div>
+            <div class="support-card">
+                <h3>Database Systems</h3>
+                <p><strong>Data Management Solutions:</strong> MySQL, PostgreSQL, Microsoft SQL Server, Oracle, MongoDB, Redis, Elasticsearch, Cassandra, DynamoDB, Firebase Firestore</p>
+            </div>
+            <div class="support-card">
+                <h3>Cloud Platforms</h3>
+                <p><strong>Cloud Infrastructure:</strong> Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), DigitalOcean, Heroku, Vercel, Netlify, Cloudflare</p>
+            </div>
+            <div class="support-card">
+                <h3>Mobile Development</h3>
+                <p><strong>Cross-Platform Solutions:</strong> React Native, Flutter, Ionic, Xamarin, Native Android (Java/Kotlin), Native iOS (Swift/Objective-C), Progressive Web Apps (PWA)</p>
+            </div>
+            <div class="support-card">
+                <h3>DevOps & Tools</h3>
+                <p><strong>Development & Deployment:</strong> Docker, Kubernetes, Git, Jenkins, GitHub Actions, CI/CD Pipelines, Linux, Apache, Nginx, Terraform, Ansible</p>
+            </div>
+            <div class="support-card">
+                <h3>AI & Machine Learning</h3>
+                <p><strong>Intelligent Solutions:</strong> TensorFlow, PyTorch, scikit-learn, Keras, OpenAI GPT, Natural Language Processing, Computer Vision, Predictive Analytics</p>
+            </div>
+            <div class="support-card">
+                <h3>Emerging Technologies</h3>
+                <p><strong>Future-Ready Solutions:</strong> Blockchain, Internet of Things (IoT), Augmented Reality (AR), Virtual Reality (VR), Quantum Computing, Edge Computing</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Industry-Specific Solutions</h2>
+        <p>Our deep understanding of various industries allows us to provide specialized solutions that address sector-specific challenges and requirements. We combine our technical expertise with industry knowledge to deliver solutions that truly make a difference.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🏥 Healthcare Technology</h3>
+                <p>Electronic Health Records (EHR), Patient Management Systems, Telemedicine Platforms, Medical Device Integration, HIPAA Compliance, Healthcare Analytics, Medical Imaging Solutions</p>
+            </div>
+            <div class="support-card">
+                <h3>🏦 Financial Services</h3>
+                <p>Banking Software, Payment Processing Systems, Financial Analytics, Risk Management Tools, Compliance Solutions, Cryptocurrency Platforms, Trading Systems</p>
+            </div>
+            <div class="support-card">
+                <h3>🎓 Education Technology</h3>
+                <p>Learning Management Systems (LMS), Student Information Systems, Online Learning Platforms, Educational Apps, Virtual Classrooms, Assessment Tools</p>
+            </div>
+            <div class="support-card">
+                <h3>🏪 E-commerce & Retail</h3>
+                <p>Online Stores, Inventory Management, Point of Sale Systems, Customer Loyalty Programs, Supply Chain Management, Omnichannel Solutions</p>
+            </div>
+            <div class="support-card">
+                <h3>🏭 Manufacturing & Logistics</h3>
+                <p>Manufacturing Execution Systems (MES), Supply Chain Optimization, IoT Integration, Quality Control Systems, Warehouse Management</p>
+            </div>
+            <div class="support-card">
+                <h3>🏢 Real Estate</h3>
+                <p>Property Management Systems, Real Estate Portals, CRM for Real Estate, Virtual Property Tours, Investment Analysis Tools</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Service Delivery Methodology</h2>
+        <p>Our proven service delivery methodology ensures consistent, high-quality results while maintaining transparency and collaboration throughout the project lifecycle. We follow industry best practices and adapt our approach to meet the specific needs of each project.</p>
+
+        <div class="problem-solution">
+            <h3>Our Comprehensive Service Delivery Process</h3>
+            <ol class="solution-steps">
+                <li><strong>Discovery & Requirements Analysis:</strong> We begin with thorough discovery sessions to understand your business objectives, technical requirements, constraints, and success criteria. This phase includes stakeholder interviews, requirement documentation, and feasibility analysis.</li>
+                <li><strong>Strategic Planning & Architecture:</strong> Our architects and senior consultants develop comprehensive project plans, technical architecture, and implementation strategies that optimize for performance, scalability, security, and maintainability.</li>
+                <li><strong>Design & Prototyping:</strong> We create detailed designs, wireframes, and prototypes that visualize the solution and allow for early feedback and validation before full-scale development begins.</li>
+                <li><strong>Agile Development & Implementation:</strong> Using agile methodologies, we develop and implement solutions in iterative sprints, providing regular updates, demonstrations, and opportunities for feedback and course correction.</li>
+                <li><strong>Quality Assurance & Testing:</strong> Comprehensive testing protocols including unit testing, integration testing, system testing, performance testing, security testing, and user acceptance testing ensure quality and reliability.</li>
+                <li><strong>Deployment & Go-Live Support:</strong> We manage the entire deployment process including environment setup, data migration, system integration, user training, and go-live support to ensure smooth transition.</li>
+                <li><strong>Ongoing Support & Optimization:</strong> Post-deployment support includes monitoring, maintenance, performance optimization, security updates, and continuous improvement to ensure long-term success.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Client Success Stories</h2>
+        <p>Our success is measured by the success of our clients. Here are some examples of how our services have helped businesses achieve their goals and overcome challenges:</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>E-commerce Platform Transformation</h3>
+                <p>"Aditya Softwares completely transformed our online presence with a custom e-commerce platform that increased our sales by 400% in the first year. The platform handles thousands of transactions daily and has been completely reliable." - Retail Client</p>
+            </div>
+            <div class="support-card">
+                <h3>Healthcare System Implementation</h3>
+                <p>"The patient management system developed by Aditya Softwares has revolutionized our operations. We've reduced administrative time by 60% and improved patient satisfaction significantly. The system is intuitive and powerful." - Healthcare Provider</p>
+            </div>
+            <div class="support-card">
+                <h3>Manufacturing Automation</h3>
+                <p>"The IoT-based monitoring system implemented by Aditya Softwares has improved our production efficiency by 35% and reduced downtime by 50%. The real-time analytics help us make better decisions." - Manufacturing Company</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Getting Started with Our Services</h2>
+        <p>Ready to transform your business with technology? We make it easy to get started with our comprehensive consultation process that helps us understand your needs and recommend the best solutions for your specific situation.</p>
+
+        <div class="problem-solution">
+            <h3>How to Begin Your Project</h3>
+            <ol class="solution-steps">
+                <li><strong>Initial Consultation:</strong> Schedule a free consultation to discuss your project requirements, objectives, and challenges with our experts.</li>
+                <li><strong>Requirements Assessment:</strong> We conduct a detailed assessment of your needs and provide recommendations for the best approach and technologies.</li>
+                <li><strong>Proposal & Planning:</strong> Receive a comprehensive proposal including project scope, timeline, technology stack, and investment requirements.</li>
+                <li><strong>Project Kickoff:</strong> Once approved, we begin with project kickoff, team introduction, and detailed planning sessions.</li>
+                <li><strong>Development & Delivery:</strong> Regular updates and demonstrations throughout the development process ensure transparency and alignment.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Ready to Start Your Technology Journey?</h2>
+        <p>Whether you need a simple website, a complex enterprise system, or anything in between, our team of experts is ready to help you achieve your technology goals. Let's discuss your requirements and create a solution that drives your business forward.</p>
+        
+        <p>Contact us today for a free consultation and discover how our comprehensive IT services can transform your business operations, improve efficiency, and accelerate growth in today's competitive marketplace.</p>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for('enquiry') }}" class="cta-button">Request Project Quote</a>
+            <a href="{{ url_for('contact') }}" class="cta-button" style="margin-left: 1rem;">Schedule Consultation</a>
+            <a href="{{ url_for('youtube_videos') }}" class="cta-button" style="margin-left: 1rem;">Watch Our Tutorials</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

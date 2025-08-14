@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aditya-softwares-website.onrender.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow certain paths (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /services
+Allow: /tech-support
+Allow: /network-support
+Allow: /about
+Allow: /contact
+Allow: /enquiry
+Allow: /static/
+

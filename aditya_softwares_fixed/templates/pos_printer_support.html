@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}POS Printer Support - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert POS printer support, troubleshooting, repair, and maintenance services for retail and hospitality businesses.{% endblock %}
+
+{% block canonical_url %}{{ url_for("pos_printer_support", _external=True) }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("services") }}">Services</a>
+            <span>/</span>
+            <a href="{{ url_for("hardware_support") }}">Hardware Support</a>
+            <span>/</span>
+            <span>POS Printer Support</span>
+        </div>
+        <h1>POS Printer Support & Repair</h1>
+        <p>Reliable solutions for your Point-of-Sale printing needs.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Our POS Printer Support Services</h2>
+        <p>Aditya Softwares provides specialized support for Point-of-Sale (POS) printers, ensuring your retail and hospitality operations run smoothly. We handle installation, troubleshooting, and maintenance for various POS printer models.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_pos_printer.png") }}" alt="POS Printer Installation">
+                <h3>Installation & Setup</h3>
+                <p>Professional installation and configuration of POS printers, including driver setup and integration with POS systems.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_printer.png") }}" alt="POS Printer Troubleshooting">
+                <h3>Troubleshooting & Repair</h3>
+                <p>Diagnosing and fixing common POS printer issues like paper jams, print quality problems, and connectivity errors.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="POS Software Support">
+                <h3>Software & Driver Issues</h3>
+                <p>Resolving software conflicts, updating drivers, and configuring POS software for optimal printing.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_hardware.png") }}" alt="POS Printer Maintenance">
+                <h3>Preventive Maintenance</h3>
+                <p>Regular cleaning, calibration, and component checks to extend the lifespan of your POS printers.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Common POS Printer Problems We Fix</h2>
+        <div class="problem-solution">
+            <h3>No Print Output</h3>
+            <p>Resolving issues where the POS printer is not printing, including power problems, connectivity issues, or empty paper rolls.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Poor Print Quality</h3>
+            <p>Addressing faded prints, blank lines, smudges, or other print quality issues, often due to print head problems or incorrect settings.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Paper Jams & Feeding Issues</h3>
+            <p>Clearing paper jams, fixing misfeeds, and ensuring smooth paper handling for continuous operation.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Connectivity Problems</h3>
+            <p>Troubleshooting USB, Ethernet, or Wi-Fi connectivity issues preventing your POS printer from communicating with your POS system.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares for POS Printer Support?</h2>
+        <ul>
+            <li><strong>Specialized POS Expertise:</strong> Our technicians are highly skilled in supporting various POS printer brands and models.</li>
+            <li><strong>Fast On-site Service:</strong> We understand the critical nature of POS systems and provide prompt on-site support.</li>
+            <li><strong>Minimize Downtime:</strong> Our goal is to get your POS printers back online quickly to avoid business disruption.</li>
+            <li><strong>Comprehensive Solutions:</strong> We offer complete solutions from hardware repair to software configuration.</li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Get Expert POS Printer Support Today!</h2>
+        <p>Ensure your transactions are seamless with reliable POS printer support from Aditya Softwares.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

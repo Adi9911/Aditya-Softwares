@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Network Support Services - Router, Switch, WiFi Configuration | Aditya Softwares{% endblock %}
+
+{% block meta_description %}Professional network support services including router configuration, switch setup, WiFi optimization, network troubleshooting, and complete networking solutions.{% endblock %}
+
+{% block canonical_url %}/network-support{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <span>Network Support</span>
+        </div>
+        <h1>Network Support Services</h1>
+        <p>Professional networking solutions for homes and businesses</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Network Support Categories</h2>
+        <p>Comprehensive networking services to keep your connections fast, secure, and reliable. Our network specialists handle everything from basic setup to enterprise-level configurations.</p>
+    </div>
+
+    <div class="tech-support-grid">
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_router.png') }}" alt="Router Support">
+            <h3>Router Configuration</h3>
+            <p>Expert router setup, configuration, firmware updates, and optimization for maximum performance and security.</p>
+            <a href="{{ url_for('router_support') }}" class="support-link">Router Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_switch.png') }}" alt="Switch Support">
+            <h3>Network Switch Setup</h3>
+            <p>Professional network switch configuration, VLAN setup, and managed switch optimization for business networks.</p>
+            <a href="{{ url_for('switch_support') }}" class="support-link">Switch Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_technology_1.png') }}" alt="WiFi Support">
+            <h3>WiFi Optimization</h3>
+            <p>WiFi network setup, range extension, security configuration, and performance optimization services.</p>
+            <a href="{{ url_for('network_support') }}" class="support-link">WiFi Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_server.png') }}" alt="Network Security">
+            <h3>Network Security</h3>
+            <p>Comprehensive network security setup including firewalls, VPN configuration, and security monitoring.</p>
+            <a href="{{ url_for('network_support') }}" class="support-link">Security Support</a>
+        </div>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Network Problem: Slow Internet Speed</h3>
+        <p><strong>Problem:</strong> Internet connection is significantly slower than expected or advertised speeds.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Test internet speed using multiple speed testing websites and compare with ISP plan</li>
+            <li>Check for background applications consuming bandwidth and close unnecessary programs</li>
+            <li>Restart router and modem by unplugging for 30 seconds and reconnecting</li>
+            <li>Update router firmware and check for optimal WiFi channel selection</li>
+            <li>Contact ISP if speeds remain below advertised rates after troubleshooting</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Network Problem: WiFi Connection Drops</h3>
+        <p><strong>Problem:</strong> WiFi connection frequently disconnects or becomes unstable.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check WiFi signal strength and move closer to router to test stability</li>
+            <li>Update network adapter drivers on the affected device</li>
+            <li>Change WiFi channel to avoid interference from neighboring networks</li>
+            <li>Reset network settings on the device and reconnect to WiFi</li>
+            <li>Replace or upgrade router if hardware is outdated or failing</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Network Problem: Cannot Access Certain Websites</h3>
+        <p><strong>Problem:</strong> Some websites are inaccessible while others work normally.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Clear browser cache and cookies, then try accessing the website again</li>
+            <li>Try accessing the website using a different browser or incognito mode</li>
+            <li>Change DNS servers to public DNS (8.8.8.8 or 1.1.1.1) and test connectivity</li>
+            <li>Disable VPN or proxy settings temporarily to check if they're causing issues</li>
+            <li>Check if the website is down using online tools or contact website administrator</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Network Problem: Router Not Responding</h3>
+        <p><strong>Problem:</strong> Router becomes unresponsive and cannot be accessed through web interface.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Power cycle the router by unplugging for 30 seconds and reconnecting</li>
+            <li>Check all cable connections and ensure ethernet cables are properly seated</li>
+            <li>Try accessing router using different IP addresses (192.168.1.1 or 192.168.0.1)</li>
+            <li>Perform factory reset using the reset button if web interface remains inaccessible</li>
+            <li>Update router firmware or contact manufacturer if issues persist</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Network Problem: Network Printer Not Found</h3>
+        <p><strong>Problem:</strong> Network printer cannot be detected or accessed by computers on the network.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Verify printer is connected to network and has valid IP address</li>
+            <li>Check printer network settings and ensure it's on the same subnet</li>
+            <li>Restart printer and allow it to fully reconnect to the network</li>
+            <li>Add printer manually using IP address in computer's printer settings</li>
+            <li>Update printer drivers and check firewall settings that might block printer access</li>
+        </ol>
+    </div>
+
+    <div class="form-container">
+        <h2>Enterprise Network Solutions</h2>
+        <p>We provide comprehensive enterprise networking solutions including network design, implementation, monitoring, and maintenance for businesses of all sizes.</p>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🏢 Business Networks</h3>
+                <p>Complete business network setup with redundancy, security, and scalability considerations.</p>
+            </div>
+            <div class="support-card">
+                <h3>🔒 Security Implementation</h3>
+                <p>Advanced security measures including firewalls, intrusion detection, and access control.</p>
+            </div>
+            <div class="support-card">
+                <h3>📊 Network Monitoring</h3>
+                <p>24/7 network monitoring and proactive maintenance to prevent issues before they occur.</p>
+            </div>
+            <div class="support-card">
+                <h3>☁️ Cloud Integration</h3>
+                <p>Seamless integration with cloud services and hybrid network configurations.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Need Network Support?</h2>
+        <p>Our network specialists are ready to help with any networking challenge. From simple home WiFi setup to complex enterprise networks.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for('contact') }}" class="cta-button">Get Network Support</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

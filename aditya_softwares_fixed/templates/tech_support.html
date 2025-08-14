@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}Technical Support Services - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Comprehensive technical support services for PC, laptop, CCTV, printers, servers, Windows, AI/ML, and all computer-related hardware and software issues.{% endblock %}
+
+{% block canonical_url %}/tech-support{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <span>Technical Support</span>
+        </div>
+        <h1>Technical Support Services</h1>
+        <p>Professional IT support for all your technology needs</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Choose Your Support Category</h2>
+        <p>Select the type of technical support you need. Our expert technicians are ready to help with any computer-related issue.</p>
+    </div>
+
+    <div class="tech-support-grid">
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_hardware.png') }}" alt="Hardware Support">
+            <h3>Hardware Support</h3>
+            <p>Complete hardware troubleshooting and repair services for PCs, laptops, and all computer components.</p>
+            <a href="{{ url_for('hardware_support') }}" class="support-link">Get Hardware Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_software.png') }}" alt="Software Support">
+            <h3>Software Support</h3>
+            <p>Software installation, configuration, troubleshooting, and optimization for all programming languages and applications.</p>
+            <a href="{{ url_for('software_support') }}" class="support-link">Get Software Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_printer.png') }}" alt="Printer Support">
+            <h3>Printer Support</h3>
+            <p>Expert support for all types of printers including inkjet, laser, POS printers, and printing solutions.</p>
+            <a href="{{ url_for('printer_support') }}" class="support-link">Get Printer Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_cctv.png') }}" alt="CCTV Support">
+            <h3>CCTV & Security</h3>
+            <p>Professional CCTV installation, configuration, maintenance, and security system optimization.</p>
+            <a href="{{ url_for('cctv_support') }}" class="support-link">Get CCTV Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_server.png') }}" alt="Server Support">
+            <h3>Server Support</h3>
+            <p>Comprehensive server setup, maintenance, troubleshooting, and infrastructure management services.</p>
+            <a href="{{ url_for('server_support') }}" class="support-link">Get Server Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_windows_os.png') }}" alt="Windows Support">
+            <h3>Windows Support</h3>
+            <p>Complete Windows operating system support, updates, troubleshooting, and performance optimization.</p>
+            <a href="{{ url_for('windows_support') }}" class="support-link">Get Windows Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_ai.png') }}" alt="AI & ML Support">
+            <h3>AI & Machine Learning</h3>
+            <p>Advanced AI and ML implementation, support, and consultation for modern business solutions.</p>
+            <a href="{{ url_for('ai_ml_support') }}" class="support-link">Get AI/ML Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_scanner.png') }}" alt="Scanner Support">
+            <h3>Scanner & Peripherals</h3>
+            <p>Support for scanners, balance machines, and all computer peripheral devices and accessories.</p>
+            <a href="{{ url_for('scanner_support') }}" class="support-link">Get Scanner Support</a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Our Technical Support Process</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>1. Problem Analysis</h3>
+                <p>We thoroughly analyze your technical issue to understand the root cause and determine the best solution approach.</p>
+            </div>
+            <div class="support-card">
+                <h3>2. Solution Planning</h3>
+                <p>Our experts develop a comprehensive plan to resolve your issue efficiently with minimal disruption.</p>
+            </div>
+            <div class="support-card">
+                <h3>3. Implementation</h3>
+                <p>We implement the solution using industry best practices and proven methodologies.</p>
+            </div>
+            <div class="support-card">
+                <h3>4. Testing & Verification</h3>
+                <p>Thorough testing ensures the solution works perfectly and meets your requirements.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Emergency Support Available</h2>
+        <p>Need immediate technical assistance? Our emergency support team is available for critical issues that require urgent attention.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for('contact') }}" class="cta-button">Contact Emergency Support</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

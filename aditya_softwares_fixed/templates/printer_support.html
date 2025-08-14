@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}Printer Support Services - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Professional printer support services including installation, troubleshooting, maintenance for all types of printers, POS printers, and printing systems.{% endblock %}
+
+{% block canonical_url %}/tech-support/printers{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("tech_support") }}">Technical Support</a>
+            <span>/</span>
+            <span>Printer Support</span>
+        </div>
+        <h1>Printer Support Services</h1>
+        <p>Professional printer installation, troubleshooting, and maintenance</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Complete Printer Support Solutions</h2>
+        <p>We provide comprehensive printer support services for all types of printing devices including desktop printers, network printers, POS printers, and specialized printing systems. Our experts can help with installation, configuration, troubleshooting, and ongoing maintenance.</p>
+    </div>
+
+    <div class="tech-support-grid">
+        <div class="support-card">
+            <img src="{{ url_for("static", filename="images/futuristic_printer.png") }}" alt="Desktop Printers">
+            <h3>Desktop Printers</h3>
+            <p>Support for inkjet, laser, and all-in-one desktop printers. We handle driver installation, print quality optimization, and connectivity issues.</p>
+        </div>
+        <div class="support-card">
+            <img src="{{ url_for("static", filename="images/futuristic_pos_printer.png") }}" alt="POS Printers">
+            <h3>POS & Receipt Printers</h3>
+            <p>Specialized support for point-of-sale printers, receipt printers, and thermal printing systems used in retail and hospitality environments.</p>
+        </div>
+        <div class="support-card">
+            <img src="{{ url_for("static", filename="images/futuristic_server.png") }}" alt="Network Printers">
+            <h3>Network Printers</h3>
+            <p>Setup and maintenance of network-connected printers, print servers, and shared printing solutions for office environments.</p>
+        </div>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Printer Problem: Printer Not Responding</h3>
+        <p><strong>Problem:</strong> Printer is not responding to print commands or appears offline.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check power connection and ensure printer is turned on</li>
+            <li>Verify USB or network cable connections are secure</li>
+            <li>Restart both the printer and computer</li>
+            <li>Check printer status in system settings and set as default if needed</li>
+            <li>Update or reinstall printer drivers</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Printer Problem: Poor Print Quality</h3>
+        <p><strong>Problem:</strong> Printed documents have poor quality, streaks, or faded text.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check ink or toner levels and replace if low</li>
+            <li>Run printer head cleaning utility from printer software</li>
+            <li>Align print heads using printer maintenance tools</li>
+            <li>Use appropriate paper type and quality settings</li>
+            <li>Clean printer rollers and internal components</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Printer Problem: Paper Jams</h3>
+        <p><strong>Problem:</strong> Frequent paper jams or paper feeding issues.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Remove jammed paper carefully without tearing</li>
+            <li>Check paper tray for proper loading and alignment</li>
+            <li>Use appropriate paper size and type for the printer</li>
+            <li>Clean paper rollers and feeding mechanisms</li>
+            <li>Adjust paper guides and ensure they're not too tight</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Printer Problem: Network Connectivity Issues</h3>
+        <p><strong>Problem:</strong> Network printer cannot be found or connected to.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check network cable connections or WiFi settings</li>
+            <li>Verify printer IP address and network configuration</li>
+            <li>Restart router and printer to refresh network connection</li>
+            <li>Update printer firmware and network drivers</li>
+            <li>Configure firewall settings to allow printer communication</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Printer Problem: Driver Installation Issues</h3>
+        <p><strong>Problem:</strong> Printer drivers won't install or are causing system conflicts.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Download latest drivers from manufacturer's official website</li>
+            <li>Uninstall old printer drivers completely before installing new ones</li>
+            <li>Run driver installation as administrator</li>
+            <li>Disable antivirus temporarily during driver installation</li>
+            <li>Use Windows Update to automatically find compatible drivers</li>
+        </ol>
+    </div>
+
+    <div class="form-container">
+        <h2>Printer Types We Support</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🖨️ Inkjet Printers</h3>
+                <p>Canon, HP, Epson, Brother inkjet printers for home and office use. Color and monochrome printing solutions.</p>
+            </div>
+            <div class="support-card">
+                <h3>⚡ Laser Printers</h3>
+                <p>High-speed laser printers for business environments. Monochrome and color laser printing systems.</p>
+            </div>
+            <div class="support-card">
+                <h3>🏪 POS Printers</h3>
+                <p>Thermal receipt printers, label printers, and specialized point-of-sale printing equipment.</p>
+            </div>
+            <div class="support-card">
+                <h3>🏢 Enterprise Printers</h3>
+                <p>Large format printers, production printers, and high-volume printing systems for enterprises.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Printer Maintenance Services</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🔧 Regular Maintenance</h3>
+                <p>Scheduled cleaning, calibration, and preventive maintenance to ensure optimal printer performance and longevity.</p>
+            </div>
+            <div class="support-card">
+                <h3>🛠️ Repair Services</h3>
+                <p>Professional repair services for mechanical issues, component replacement, and hardware troubleshooting.</p>
+            </div>
+            <div class="support-card">
+                <h3>📊 Performance Optimization</h3>
+                <p>Print quality optimization, speed improvements, and configuration tuning for maximum efficiency.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Need Printer Support?</h2>
+        <p>Our printer specialists are ready to help you with any printing-related issues. From setup to troubleshooting, we provide comprehensive printer support services.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Get Printer Support</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Laptop Support - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert laptop support services including troubleshooting, repair, upgrades, and maintenance for all laptop brands.{% endblock %}
+
+{% block canonical_url %}{{ url_for("laptop_support", _external=True) }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("services") }}">Services</a>
+            <span>/</span>
+            <a href="{{ url_for("hardware_support") }}">Hardware Support</a>
+            <span>/</span>
+            <span>Laptop Support</span>
+        </div>
+        <h1>Laptop Support & Repair</h1>
+        <p>Comprehensive solutions for all your laptop computer needs.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Our Laptop Support Services</h2>
+        <p>Aditya Softwares provides expert support for all types of laptops, ensuring your portable computer runs efficiently and reliably. From hardware repairs to software troubleshooting, we cover all aspects of laptop maintenance.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_laptop.png") }}" alt="Laptop Repair">
+                <h3>Hardware Repair & Replacement</h3>
+                <p>Diagnosing and repairing faulty components like screens, keyboards, batteries, motherboards, and hard drives.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_windows_os.png") }}" alt="OS Troubleshooting">
+                <h3>Operating System Troubleshooting</h3>
+                <p>Resolving Windows and other OS issues, system crashes, boot errors, and performance slowdowns.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_hardware.png") }}" alt="Laptop Upgrades">
+                <h3>Performance Upgrades</h3>
+                <p>Upgrading RAM, SSD installation, and other enhancements to boost your laptop's speed and storage.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="Software Support">
+                <h3>Software & Driver Support</h3>
+                <p>Installation, configuration, and troubleshooting of software applications and device drivers specific to laptops.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Common Laptop Problems We Fix</h2>
+        <div class="problem-solution">
+            <h3>Screen Damage & Display Issues</h3>
+            <p>Repairing cracked screens, backlight problems, flickering displays, and other visual anomalies.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Battery & Charging Problems</h3>
+            <p>Diagnosing and replacing faulty batteries, repairing charging ports, and resolving power adapter issues.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Keyboard & Touchpad Malfunctions</h3>
+            <p>Fixing unresponsive keys, sticky keyboards, erratic touchpad behavior, and external peripheral connectivity.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Overheating & Fan Noise</h3>
+            <p>Cleaning internal components, replacing thermal paste, and repairing noisy or malfunctioning cooling fans.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares for Laptop Support?</h2>
+        <ul>
+            <li><strong>Specialized Laptop Expertise:</strong> Our technicians are highly skilled in diagnosing and repairing all laptop brands and models.</li>
+            <li><strong>Component-Level Repair:</strong> We offer detailed diagnostics and repair down to the component level, saving you money.</li>
+            <li><strong>Genuine Parts:</strong> We use only high-quality, genuine replacement parts for all repairs.</li>
+            <li><strong>Fast & Efficient Service:</strong> We understand the importance of your laptop and strive for quick turnaround times.</li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Get Expert Laptop Support Today!</h2>
+        <p>Ensure your laptop performs at its best with reliable support from Aditya Softwares.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

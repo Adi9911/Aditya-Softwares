@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Windows Support - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert Windows operating system support, troubleshooting, installation, and optimization services for all versions of Windows.{% endblock %}
+
+{% block canonical_url %}{{ url_for("windows_support", _external=True) }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("services") }}">Services</a>
+            <span>/</span>
+            <a href="{{ url_for("tech_support") }}">Tech Support</a>
+            <span>/</span>
+            <span>Windows Support</span>
+        </div>
+        <h1>Windows Operating System Support</h1>
+        <p>Comprehensive solutions for all your Windows OS needs.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Our Windows Support Services</h2>
+        <p>Aditya Softwares provides expert support for all versions of Microsoft Windows, ensuring your operating system runs smoothly and efficiently. From installation to troubleshooting, we cover all aspects of Windows management.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_windows_os.png") }}" alt="Windows Installation">
+                <h3>Windows Installation & Setup</h3>
+                <p>Clean installation, upgrade, and dual-boot configurations for Windows 11, 10, 8.1, and 7.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_pc.png") }}" alt="Windows Troubleshooting">
+                <h3>Troubleshooting & Repair</h3>
+                <p>Diagnosing and fixing common Windows errors, blue screens, crashes, and performance issues.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="Windows Optimization">
+                <h3>Performance Optimization</h3>
+                <p>Speeding up slow Windows systems, optimizing startup, and managing background processes.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_server.png") }}" alt="Windows Security">
+                <h3>Security & Updates</h3>
+                <p>Ensuring your Windows system is secure with the latest updates, antivirus, and firewall configurations.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Common Windows Issues We Resolve</h2>
+        <div class="problem-solution">
+            <h3>Slow Performance & Freezes</h3>
+            <p>We identify and resolve issues causing your Windows system to slow down, freeze, or become unresponsive, including disk errors, malware, and resource conflicts.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Startup Problems</h3>
+            <p>Fixing Windows boot errors, endless loops, and systems that fail to start up correctly.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Driver & Compatibility Issues</h3>
+            <p>Resolving conflicts with hardware drivers, software compatibility problems, and peripheral device malfunctions.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Virus & Malware Removal</h3>
+            <p>Thorough scanning and removal of viruses, ransomware, spyware, and other malicious software from your Windows system.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares for Windows Support?</h2>
+        <ul>
+            <li><strong>Experienced Technicians:</strong> Our team has extensive knowledge of all Windows versions.</li>
+            <li><strong>Fast & Reliable Service:</strong> We provide quick and effective solutions to minimize your downtime.</li>
+            <li><strong>Remote & On-site Support:</strong> Flexible support options to suit your needs.</li>
+            <li><strong>Data Security:</strong> We prioritize the safety and privacy of your data during all support processes.</li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Get Expert Windows Support Today!</h2>
+        <p>Don't let Windows issues slow you down. Contact Aditya Softwares for reliable and efficient Windows operating system support.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

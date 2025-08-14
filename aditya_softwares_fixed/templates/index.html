@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Aditya Softwares - Professional IT Support, Technical Services & Network Solutions{% endblock %}
+
+{% block meta_description %}Aditya Softwares provides expert IT support, computer repair, network solutions, CCTV installation, printer support, server maintenance, and AI/ML services. Professional technical support for all your technology needs.{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>Professional IT Support & Technical Services</h1>
+        <p>Expert solutions for PC, Laptop, CCTV, Printers, Servers, Network Equipment, AI & ML Technologies</p>
+        <a href="{{ url_for('tech_support') }}" class="cta-button">Explore Our Services</a>
+    </div>
+</section>
+
+<section class="container">
+    <div class="page-header">
+        <h2>Comprehensive Technology Solutions</h2>
+        <p>From hardware repairs to cutting-edge AI implementations, we've got you covered</p>
+    </div>
+
+    <div class="tech-support-grid">
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_pc.png') }}" alt="PC Hardware Support">
+            <h3>PC & Laptop Support</h3>
+            <p>Complete hardware and software support for desktop computers and laptops. From component upgrades to system optimization.</p>
+            <a href="{{ url_for('hardware_support') }}" class="support-link">Learn More</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_software.png') }}" alt="Software Support">
+            <h3>Software Solutions</h3>
+            <p>Professional software installation, configuration, troubleshooting, and custom development services.</p>
+            <a href="{{ url_for('software_support') }}" class="support-link">Learn More</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_cctv.png') }}" alt="CCTV Support">
+            <h3>CCTV & Security</h3>
+            <p>Professional CCTV installation, configuration, and maintenance for comprehensive security solutions.</p>
+            <a href="{{ url_for('cctv_support') }}" class="support-link">Learn More</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_printer.png') }}" alt="Printer Support">
+            <h3>Printer & POS Systems</h3>
+            <p>Expert support for all types of printers, POS printers, and point-of-sale systems.</p>
+            <a href="{{ url_for('printer_support') }}" class="support-link">Learn More</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_server.png') }}" alt="Server Support">
+            <h3>Server & Infrastructure</h3>
+            <p>Professional server setup, maintenance, and infrastructure management for businesses.</p>
+            <a href="{{ url_for('server_support') }}" class="support-link">Learn More</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_router.png') }}" alt="Network Support">
+            <h3>Network Solutions</h3>
+            <p>Complete network setup, router configuration, switch management, and connectivity solutions.</p>
+            <a href="{{ url_for('network_support') }}" class="support-link">Learn More</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_windows_os.png') }}" alt="Windows Support">
+            <h3>Windows Support</h3>
+            <p>Comprehensive Windows operating system support, updates, troubleshooting, and optimization.</p>
+            <a href="{{ url_for('windows_support') }}" class="support-link">Learn More</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_ai.png') }}" alt="AI & ML Support">
+            <h3>AI & Machine Learning</h3>
+            <p>Cutting-edge AI and ML solutions, implementation, and support for modern business needs.</p>
+            <a href="{{ url_for('ai_ml_support') }}" class="support-link">Learn More</a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares?</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🔧 Expert Technicians</h3>
+                <p>Certified professionals with years of experience in IT support and technical services.</p>
+            </div>
+            <div class="support-card">
+                <h3>⚡ Quick Response</h3>
+                <p>Fast response times and efficient problem resolution to minimize downtime.</p>
+            </div>
+            <div class="support-card">
+                <h3>🛡️ Reliable Solutions</h3>
+                <p>Proven solutions and quality service with comprehensive warranty coverage.</p>
+            </div>
+            <div class="support-card">
+                <h3>💰 Competitive Pricing</h3>
+                <p>Affordable pricing with transparent costs and no hidden fees.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Get Started Today</h2>
+        <p>Ready to solve your technology challenges? Contact us for a free consultation and let our experts help you find the perfect solution.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for('contact') }}" class="cta-button">Contact Us Now</a>
+            <a href="{{ url_for('enquiry') }}" class="cta-button" style="margin-left: 1rem;">Request Quote</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
