@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}PC Support - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert PC support services including troubleshooting, repair, upgrades, and maintenance for desktop computers.{% endblock %}
+
+{% block canonical_url %}{{ url_for("pc_support", _external=True) }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("services") }}">Services</a>
+            <span>/</span>
+            <a href="{{ url_for("hardware_support") }}">Hardware Support</a>
+            <span>/</span>
+            <span>PC Support</span>
+        </div>
+        <h1>Desktop PC Support & Repair</h1>
+        <p>Comprehensive solutions for all your desktop computer needs.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Our PC Support Services</h2>
+        <p>Aditya Softwares provides expert support for all types of desktop PCs, ensuring your computer runs efficiently and reliably. From hardware repairs to software troubleshooting, we cover all aspects of PC maintenance.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_pc.png") }}" alt="PC Repair">
+                <h3>Hardware Repair & Replacement</h3>
+                <p>Diagnosing and repairing faulty components like motherboards, graphics cards, power supplies, and hard drives.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_windows_os.png") }}" alt="OS Troubleshooting">
+                <h3>Operating System Troubleshooting</h3>
+                <p>Resolving Windows and other OS issues, system crashes, boot errors, and performance slowdowns.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_hardware.png") }}" alt="PC Upgrades">
+                <h3>Performance Upgrades</h3>
+                <p>Upgrading RAM, SSD installation, processor upgrades, and other enhancements to boost your PC's speed.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="Software Support">
+                <h3>Software & Driver Support</h3>
+                <p>Installation, configuration, and troubleshooting of software applications and device drivers.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Common PC Problems We Fix</h2>
+        <div class="problem-solution">
+            <h3>PC Not Turning On</h3>
+            <p>Diagnosing power supply issues, motherboard failures, or other components preventing your PC from booting up.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Slow Performance & Freezing</h3>
+            <p>Identifying and resolving issues causing your PC to run slowly, freeze, or become unresponsive, including malware, fragmented drives, or insufficient RAM.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Overheating Issues</h3>
+            <p>Cleaning dust, replacing thermal paste, and improving airflow to prevent overheating and system damage.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Data Recovery</h3>
+            <p>Assisting with data recovery from failed hard drives or accidental deletions, where possible.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares for PC Support?</h2>
+        <ul>
+            <li><strong>Experienced Technicians:</strong> Our team has extensive experience with all PC brands and custom builds.</li>
+            <li><strong>Component-Level Repair:</strong> We offer detailed diagnostics and repair down to the component level.</li>
+            <li><strong>Transparent Pricing:</strong> Clear and upfront pricing with no hidden fees.</li>
+            <li><strong>Quality Parts:</strong> We use high-quality replacement parts for all repairs and upgrades.</li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Get Expert PC Support Today!</h2>
+        <p>Ensure your desktop PC performs at its best with reliable support from Aditya Softwares.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

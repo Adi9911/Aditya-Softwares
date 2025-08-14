@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+
+{% block title %}Server Support Services - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Professional server support services including server setup, maintenance, cloud servers, and enterprise infrastructure management.{% endblock %}
+
+{% block canonical_url %}/tech-support/servers{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("tech_support") }}">Technical Support</a>
+            <span>/</span>
+            <span>Server Support</span>
+        </div>
+        <h1>Server Support Services</h1>
+        <p>Professional server setup, maintenance, and infrastructure management</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Comprehensive Server Solutions</h2>
+        <p>We provide complete server support services including setup, configuration, maintenance, and monitoring for physical servers, virtual servers, and cloud infrastructure. Our server experts ensure optimal performance, security, and reliability.</p>
+    </div>
+
+    <div class="tech-support-grid">
+        <div class="support-card">
+            <img src="{{ url_for("static", filename="images/futuristic_server.png") }}" alt="Physical Servers">
+            <h3>Physical Server Support</h3>
+            <p>Setup, configuration, and maintenance of physical servers including Windows Server, Linux servers, and specialized server hardware.</p>
+        </div>
+        <div class="support-card">
+            <img src="{{ url_for("static", filename="images/futuristic_technology_1.png") }}" alt="Cloud Servers">
+            <h3>Cloud Server Management</h3>
+            <p>Cloud server deployment, configuration, and management on AWS, Azure, Google Cloud, and other cloud platforms.</p>
+        </div>
+        <div class="support-card">
+            <img src="{{ url_for("static", filename="images/futuristic_hardware.png") }}" alt="Virtual Servers">
+            <h3>Virtual Server Solutions</h3>
+            <p>Virtualization setup, VM management, and virtual infrastructure optimization using VMware, Hyper-V, and other platforms.</p>
+        </div>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Server Problem: Server Performance Issues</h3>
+        <p><strong>Problem:</strong> Server is running slowly or experiencing performance degradation.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Monitor CPU, memory, and disk usage to identify bottlenecks</li>
+            <li>Check for resource-intensive processes and optimize or terminate them</li>
+            <li>Review server logs for errors or warnings</li>
+            <li>Optimize database queries and application performance</li>
+            <li>Consider hardware upgrades or load balancing solutions</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Server Problem: Server Connectivity Issues</h3>
+        <p><strong>Problem:</strong> Cannot connect to server or experiencing network connectivity problems.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check network cables and switch connections</li>
+            <li>Verify server IP configuration and network settings</li>
+            <li>Test network connectivity using ping and traceroute</li>
+            <li>Check firewall rules and security group settings</li>
+            <li>Restart network services and network adapters</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Server Problem: Server Won't Boot</h3>
+        <p><strong>Problem:</strong> Server fails to start or boot properly.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check power connections and power supply status</li>
+            <li>Verify hardware components are properly seated</li>
+            <li>Check BIOS/UEFI settings and boot order</li>
+            <li>Test memory modules and hard drives for failures</li>
+            <li>Boot from recovery media to diagnose system issues</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Server Problem: Security Vulnerabilities</h3>
+        <p><strong>Problem:</strong> Server security concerns or potential vulnerabilities.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Install latest security updates and patches</li>
+            <li>Configure firewall rules and access controls</li>
+            <li>Implement strong authentication and password policies</li>
+            <li>Regular security audits and vulnerability scans</li>
+            <li>Setup monitoring and intrusion detection systems</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Server Problem: Data Backup and Recovery</h3>
+        <p><strong>Problem:</strong> Need to implement or restore from server backups.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Implement automated backup solutions and schedules</li>
+            <li>Test backup integrity and restoration procedures</li>
+            <li>Setup offsite or cloud backup storage</li>
+            <li>Document recovery procedures and test disaster recovery</li>
+            <li>Monitor backup jobs and resolve any failures promptly</li>
+        </ol>
+    </div>
+
+    <div class="form-container">
+        <h2>Server Technologies We Support</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🪟 Windows Server</h3>
+                <p>Windows Server 2019, 2022, Active Directory, IIS, SQL Server, Exchange Server, and Microsoft server technologies.</p>
+            </div>
+            <div class="support-card">
+                <h3>🐧 Linux Servers</h3>
+                <p>Ubuntu Server, CentOS, Red Hat, SUSE, Apache, Nginx, MySQL, PostgreSQL, and open-source server solutions.</p>
+            </div>
+            <div class="support-card">
+                <h3>☁️ Cloud Platforms</h3>
+                <p>Amazon AWS, Microsoft Azure, Google Cloud Platform, DigitalOcean, and hybrid cloud solutions.</p>
+            </div>
+            <div class="support-card">
+                <h3>🔄 Virtualization</h3>
+                <p>VMware vSphere, Microsoft Hyper-V, Citrix XenServer, and container technologies like Docker and Kubernetes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Server Management Services</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>📊 24/7 Monitoring</h3>
+                <p>Continuous server monitoring, performance tracking, and proactive issue detection and resolution.</p>
+            </div>
+            <div class="support-card">
+                <h3>🔒 Security Management</h3>
+                <p>Server security hardening, patch management, access control, and security compliance monitoring.</p>
+            </div>
+            <div class="support-card">
+                <h3>💾 Backup Solutions</h3>
+                <p>Automated backup systems, disaster recovery planning, and data protection strategies.</p>
+            </div>
+            <div class="support-card">
+                <h3>⚡ Performance Optimization</h3>
+                <p>Server performance tuning, resource optimization, and capacity planning for growing businesses.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Enterprise Server Solutions</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🏢 Data Center Management</h3>
+                <p>Complete data center infrastructure management including servers, storage, networking, and environmental monitoring.</p>
+            </div>
+            <div class="support-card">
+                <h3>🔄 High Availability</h3>
+                <p>Clustering, load balancing, and failover solutions to ensure maximum uptime and business continuity.</p>
+            </div>
+            <div class="support-card">
+                <h3>📈 Scalability Planning</h3>
+                <p>Infrastructure scaling strategies, capacity planning, and growth-oriented server architecture design.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Need Server Support?</h2>
+        <p>Our server specialists are ready to help you with any server-related challenges. From setup to ongoing management, we provide comprehensive server support services.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Get Server Support</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Consultation</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

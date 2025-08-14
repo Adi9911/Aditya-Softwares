@@ -1,0 +1,484 @@
+{% extends "base.html" %}
+
+{% block title %}YouTube Videos - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Watch our latest YouTube videos featuring tech tutorials, troubleshooting guides, and IT support solutions from Aditya Softwares.{% endblock %}
+
+{% block canonical_url %}/youtube{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <span>YouTube Videos</span>
+        </div>
+        <h1>YouTube Channel</h1>
+        <p>Watch our latest tech tutorials, troubleshooting guides, and IT solutions</p>
+    </div>
+</section>
+
+<section class="container">
+    <!-- YouTube Channel Actions -->
+    <div class="form-container">
+        <h2>YouTube Channel Actions</h2>
+        <p>Manage your YouTube content with our integrated tools</p>
+        
+        <div class="tech-support-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="support-card">
+                <h3>📺 View Videos</h3>
+                <p>Browse and watch our latest tech tutorials and troubleshooting guides.</p>
+                <button onclick="loadVideos()" class="cta-button">Load Videos</button>
+            </div>
+            
+            <div class="support-card">
+                <h3>⬆️ Upload Video</h3>
+                <p>Upload new videos to your YouTube channel (requires API setup).</p>
+                <button onclick="showUploadForm()" class="cta-button">Upload Video</button>
+            </div>
+            
+            <div class="support-card">
+                <h3>⬇️ Download Video</h3>
+                <p>Download videos for offline viewing (with proper permissions).</p>
+                <button onclick="showDownloadForm()" class="cta-button">Download Video</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Upload Form -->
+    <div id="upload-form" class="form-container" style="display: none;">
+        <h2>Upload Video to YouTube</h2>
+        <form id="video-upload-form">
+            <div class="form-group">
+                <label for="video-title">Video Title</label>
+                <input type="text" id="video-title" name="title" required placeholder="Enter video title">
+            </div>
+            <div class="form-group">
+                <label for="video-description">Video Description</label>
+                <textarea id="video-description" name="description" rows="4" placeholder="Enter video description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="video-file">Video File</label>
+                <input type="file" id="video-file" name="video" accept="video/*" required>
+            </div>
+            <div class="form-group">
+                <label for="video-tags">Tags (comma separated)</label>
+                <input type="text" id="video-tags" name="tags" placeholder="tech, tutorial, IT support">
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="submit-btn">Upload Video</button>
+                <button type="button" onclick="hideUploadForm()" class="cta-button" style="margin-left: 1rem; background: #666;">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Video Download Form -->
+    <div id="download-form" class="form-container" style="display: none;">
+        <h2>Download YouTube Video</h2>
+        <form id="video-download-form">
+            <div class="form-group">
+                <label for="video-url">YouTube Video URL</label>
+                <input type="url" id="video-url" name="url" required placeholder="https://youtube.com/watch?v=...">
+            </div>
+            <div class="form-group">
+                <label for="download-quality">Quality</label>
+                <select id="download-quality" name="quality">
+                    <option value="720p">720p HD</option>
+                    <option value="480p">480p</option>
+                    <option value="360p">360p</option>
+                    <option value="audio">Audio Only</option>
+                </select>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="submit-btn">Download Video</button>
+                <button type="button" onclick="hideDownloadForm()" class="cta-button" style="margin-left: 1rem; background: #666;">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Videos Grid -->
+    <div class="form-container">
+        <h2>Latest Videos</h2>
+        <div id="videos-grid" class="tech-support-grid">
+            <div class="support-card">
+                <div class="video-placeholder">
+                    <img src="{{ url_for('static', filename='images/futuristic_technology_1.png') }}" alt="Loading videos">
+                    <h3>Loading Videos...</h3>
+                    <p>Click "Load Videos" above to see our latest content</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Channel Information -->
+    <div class="form-container">
+        <h2>Subscribe to Our Channel</h2>
+        <p>Stay updated with our latest tech tutorials, troubleshooting guides, and IT solutions by subscribing to our YouTube channel.</p>
+        
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="https://youtube.com/@adityasoftwares" target="_blank" class="cta-button" style="background: #FF0000; margin-right: 1rem;">
+                🔴 Subscribe to Our Channel
+            </a>
+            <a href="https://youtube.com/@adityasoftwares/videos" target="_blank" class="cta-button">
+                📺 View All Videos
+            </a>
+        </div>
+    </div>
+
+    <!-- Video Categories -->
+    <div class="form-container">
+        <h2>Video Categories</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for('static', filename='images/futuristic_hardware.png') }}" alt="Hardware Tutorials">
+                <h3>🔧 Hardware Tutorials</h3>
+                <p>Learn how to troubleshoot and repair PC components, laptops, and other hardware devices.</p>
+                <a href="https://youtube.com/@adityasoftwares/search?query=hardware" target="_blank" class="cta-button">Watch Hardware Videos</a>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for('static', filename='images/futuristic_software.png') }}" alt="Software Guides">
+                <h3>💻 Software Guides</h3>
+                <p>Step-by-step software installation, configuration, and troubleshooting tutorials.</p>
+                <a href="https://youtube.com/@adityasoftwares/search?query=software" target="_blank" class="cta-button">Watch Software Videos</a>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for('static', filename='images/futuristic_router.png') }}" alt="Network Setup">
+                <h3>🌐 Network Setup</h3>
+                <p>Complete guides for setting up routers, switches, and network configurations.</p>
+                <a href="https://youtube.com/@adityasoftwares/search?query=network" target="_blank" class="cta-button">Watch Network Videos</a>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for('static', filename='images/futuristic_cctv.png') }}" alt="CCTV Installation">
+                <h3>📹 CCTV Installation</h3>
+                <p>Professional CCTV camera installation and security system setup tutorials.</p>
+                <a href="https://youtube.com/@adityasoftwares/search?query=cctv" target="_blank" class="cta-button">Watch CCTV Videos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="form-container">
+        <h2>Need Help with Your Technology?</h2>
+        <p>Can't find the solution in our videos? Contact us directly for personalized IT support and solutions.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for('contact') }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for('enquiry') }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+
+<style>
+.video-placeholder {
+    text-align: center;
+    padding: 2rem;
+}
+
+.video-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+}
+
+.video-content {
+    padding: 1.5rem;
+}
+
+.video-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.video-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.video-link {
+    display: inline-block;
+    background: linear-gradient(45deg, #FF0000, #CC0000);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.video-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle video upload form
+    const uploadForm = document.getElementById('video-upload-form');
+    if (uploadForm) {
+        uploadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleVideoUpload();
+        });
+    }
+    
+    // Handle video download form
+    const downloadForm = document.getElementById('video-download-form');
+    if (downloadForm) {
+        downloadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleVideoDownload();
+        });
+    }
+});
+
+function loadVideos() {
+    const videosGrid = document.getElementById('videos-grid');
+    videosGrid.innerHTML = '<div class="support-card"><div class="video-placeholder"><h3>Loading videos...</h3></div></div>';
+    
+    fetch('/api/youtube/videos')
+        .then(response => response.json())
+        .then(videos => {
+            if (videos && videos.length > 0) {
+                videosGrid.innerHTML = '';
+                
+                videos.forEach(video => {
+                    const videoCard = createVideoCard(video);
+                    videosGrid.appendChild(videoCard);
+                });
+            } else {
+                videosGrid.innerHTML = `
+                    <div class="support-card">
+                        <div class="video-placeholder">
+                            <img src="{{ url_for('static', filename='images/futuristic_technology_1.png') }}" alt="No videos">
+                            <h3>No Videos Available</h3>
+                            <p>We're working on creating amazing content for you. Check back soon!</p>
+                        </div>
+                    </div>
+                `;
+            }
+        })
+        .catch(error => {
+            console.error('Error loading videos:', error);
+            videosGrid.innerHTML = `
+                <div class="support-card">
+                    <div class="video-placeholder">
+                        <img src="{{ url_for('static', filename='images/futuristic_technology_1.png') }}" alt="Error loading videos">
+                        <h3>Unable to Load Videos</h3>
+                        <p>Please visit our YouTube channel directly to watch our latest videos.</p>
+                        <a href="https://youtube.com/@adityasoftwares" target="_blank" class="cta-button" style="background: #FF0000; margin-top: 1rem;">
+                            Visit YouTube Channel
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+}
+
+function createVideoCard(video) {
+    const card = document.createElement('div');
+    card.className = 'video-card';
+    
+    card.innerHTML = `
+        <img src="${video.thumbnail}" alt="${video.title}" class="video-thumbnail" onclick="window.open('${video.url}', '_blank')">
+        <div class="video-content">
+            <div class="video-title">${video.title}</div>
+            <div class="video-description">${video.description}</div>
+            <a href="${video.url}" target="_blank" class="video-link">Watch Video</a>
+        </div>
+    `;
+    
+    return card;
+}
+
+function showUploadForm() {
+    document.getElementById('upload-form').style.display = 'block';
+    document.getElementById('download-form').style.display = 'none';
+    document.getElementById('upload-form').scrollIntoView({ behavior: 'smooth' });
+}
+
+function hideUploadForm() {
+    document.getElementById('upload-form').style.display = 'none';
+}
+
+function showDownloadForm() {
+    document.getElementById('download-form').style.display = 'block';
+    document.getElementById('upload-form').style.display = 'none';
+    document.getElementById('download-form').scrollIntoView({ behavior: 'smooth' });
+}
+
+function hideDownloadForm() {
+    document.getElementById('download-form').style.display = 'none';
+}
+
+function handleVideoUpload() {
+    const formData = new FormData(document.getElementById('video-upload-form'));
+    
+    // Show loading state
+    showAlert('info', 'Uploading video... This may take a while.');
+    
+    fetch('/api/youtube/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            showAlert('success', data.message);
+            document.getElementById('video-upload-form').reset();
+            hideUploadForm();
+        } else {
+            showAlert('error', data.message || 'Upload failed');
+        }
+    })
+    .catch(error => {
+        console.error('Upload error:', error);
+        showAlert('error', 'Upload failed. Please try again.');
+    });
+}
+
+function handleVideoDownload() {
+    const formData = new FormData(document.getElementById('video-download-form'));
+    const data = {
+        url: formData.get('url'),
+        quality: formData.get('quality')
+    };
+    
+    // Show loading state
+    showAlert('info', 'Processing download request...');
+    
+    fetch('/api/youtube/download', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            showAlert('success', data.message);
+        } else {
+            showAlert('info', data.message);
+        }
+        document.getElementById('video-download-form').reset();
+        hideDownloadForm();
+    })
+    .catch(error => {
+        console.error('Download error:', error);
+        showAlert('error', 'Download failed. Please try again.');
+    });
+}
+
+function showAlert(type, message) {
+    // Remove existing alerts
+    const existingAlerts = document.querySelectorAll('.alert');
+    existingAlerts.forEach(alert => alert.remove());
+    
+    // Create new alert
+    const alert = document.createElement('div');
+    alert.className = `alert alert-${type}`;
+    alert.textContent = message;
+    
+    // Insert at the top of the container
+    const container = document.querySelector('.container');
+    container.insertBefore(alert, container.firstChild);
+    
+    // Auto-remove after 5 seconds
+    setTimeout(() => {
+        alert.remove();
+    }, 5000);
+}
+</script>
+{% endblock %}
+

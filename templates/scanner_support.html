@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Scanner Support - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert scanner support, troubleshooting, installation, and maintenance services for all types of document and barcode scanners.{% endblock %}
+
+{% block canonical_url %}{{ url_for("scanner_support", _external=True) }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("services") }}">Services</a>
+            <span>/</span>
+            <a href="{{ url_for("hardware_support") }}">Hardware Support</a>
+            <span>/</span>
+            <span>Scanner Support</span>
+        </div>
+        <h1>Scanner Support & Maintenance</h1>
+        <p>Reliable solutions for all your scanning needs.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Our Scanner Support Services</h2>
+        <p>Aditya Softwares provides comprehensive support for various types of scanners, including document scanners, barcode scanners, and flatbed scanners. We ensure your scanning devices operate efficiently for your business needs.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_scanner.png") }}" alt="Scanner Installation">
+                <h3>Installation & Setup</h3>
+                <p>Professional installation and configuration of new scanners, including driver setup and network integration.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_pc.png") }}" alt="Scanner Troubleshooting">
+                <h3>Troubleshooting & Repair</h3>
+                <p>Diagnosing and fixing common scanner issues like paper jams, connectivity problems, and poor scan quality.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="Scanner Software">
+                <h3>Software & Driver Issues</h3>
+                <p>Resolving software conflicts, updating drivers, and configuring scanning software for optimal performance.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_hardware.png") }}" alt="Scanner Maintenance">
+                <h3>Preventive Maintenance</h3>
+                <p>Regular cleaning and calibration to extend the lifespan of your scanners and ensure consistent performance.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Common Scanner Problems We Fix</h2>
+        <div class="problem-solution">
+            <h3>Scanner Not Detected</h3>
+            <p>Resolving issues where your computer or network cannot detect the scanner, often due to driver or connectivity problems.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Poor Scan Quality</h3>
+            <p>Addressing blurry scans, lines on scanned documents, incorrect colors, or other image quality issues.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Paper Jams & Feeding Issues</h3>
+            <p>Clearing paper jams, fixing multi-feed problems, and ensuring smooth document feeding for high-volume scanning.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Connectivity Problems</h3>
+            <p>Troubleshooting USB, Ethernet, or Wi-Fi connectivity issues preventing your scanner from communicating with your devices.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares for Scanner Support?</h2>
+        <ul>
+            <li><strong>Specialized Expertise:</strong> Our technicians are experienced with a wide range of scanner brands and models.</li>
+            <li><strong>Quick Turnaround:</strong> We understand the importance of your scanning operations and provide prompt service.</li>
+            <li><strong>On-site & Remote Support:</strong> Flexible support options to minimize disruption to your workflow.</li>
+            <li><strong>Genuine Parts & Solutions:</strong> We use quality parts and provide lasting solutions for your scanner issues.</li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Get Expert Scanner Support Today!</h2>
+        <p>Ensure your business operations run smoothly with reliable scanner support from Aditya Softwares.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

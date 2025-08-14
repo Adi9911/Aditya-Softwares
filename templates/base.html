@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}Aditya Softwares - Professional IT Support, Technical Services, Network Solutions, Hardware & Software Support, CCTV, Printers, Servers, AI & ML Solutions{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}IT support, technical support, computer repair, laptop repair, CCTV installation, printer support, POS printer, network support, router configuration, switch setup, server support, Windows support, AI solutions, ML services, hardware troubleshooting, software installation, scanner support, balance machine repair, IT consulting, technology solutions{% endblock %}">
+    <meta name="author" content="Aditya Softwares">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{% block og_title %}Aditya Softwares - Professional IT Support & Technical Services{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Expert IT support for PC, laptop, CCTV, printers, servers, network equipment. Professional technical solutions for hardware & software issues.{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aditya-softwares-website.onrender.com{% block og_url %}{% endblock %}">
+    <meta property="og:image" content="https://aditya-softwares-website.onrender.com/static/images/futuristic_technology_1.png">
+    <meta property="og:site_name" content="Aditya Softwares">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Aditya Softwares - Professional IT Support{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Expert technical support for all your IT needs - hardware, software, network, and more.{% endblock %}">
+    <meta name="twitter:image" content="https://aditya-softwares-website.onrender.com/static/images/futuristic_technology_1.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aditya-softwares-website.onrender.com{% block canonical_url %}{% endblock %}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/futuristic_technology_1.png') }}">
+    
+    <title>{% block title %}Aditya Softwares - Professional IT Support & Technical Services{% endblock %}</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Aditya Softwares",
+        "url": "https://aditya-softwares-website.onrender.com",
+        "logo": "https://aditya-softwares-website.onrender.com/static/images/futuristic_technology_1.png",
+        "description": "Professional IT support and technical services including hardware repair, software installation, network setup, CCTV installation, and more.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-XXXXXXXXXX",
+            "contactType": "customer service",
+            "email": "singhaditya.singh22@gmail.com"
+        },
+        "sameAs": [
+            "https://www.facebook.com/adityasoftwares",
+            "https://www.linkedin.com/company/adityasoftwares",
+            "https://twitter.com/adityasoftwares"
+        ],
+        "serviceArea": {
+            "@type": "Country",
+            "name": "India"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "IT Support Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Computer Hardware Support",
+                        "description": "Professional PC and laptop hardware repair and maintenance services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Software Installation & Support",
+                        "description": "Software installation, configuration, and troubleshooting services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Network Support",
+                        "description": "Router, switch, and network infrastructure setup and maintenance"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "CCTV Installation",
+                        "description": "Professional CCTV camera installation and security system setup"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="{{ url_for('home') }}" class="logo">Aditya Softwares</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('tech_support') }}">Tech Support</a></li>
+                <li><a href="{{ url_for('network_support') }}">Network Support</a></li>
+                <li><a href="{{ url_for('youtube_videos') }}">YouTube</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Aditya Softwares. All rights reserved. | Professional IT Support & Technical Services</p>
+            <p>Email: singhaditya.singh22@gmail.com | Phone: +91-9876543210 | Expert solutions for all your technology needs</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>
+

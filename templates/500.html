@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}500 - Internal Server Error - Aditya Softwares{% endblock %}
+
+{% block meta_description %}An internal server error occurred. Please try again later or contact Aditya Softwares support for assistance.{% endblock %}
+
+{% block content %}
+<section class="container" style="text-align: center; padding: 4rem 0;">
+    <div class="form-container">
+        <img src="{{ url_for('static', filename='images/futuristic_technology_1.png') }}" alt="500 Error" style="max-width: 300px; margin-bottom: 2rem;">
+        
+        <h1 style="font-size: 4rem; color: #dc3545; margin-bottom: 1rem;">500</h1>
+        <h2 style="margin-bottom: 1rem;">Internal Server Error</h2>
+        <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
+            Something went wrong on our end. We're working to fix this issue. Please try again in a few minutes.
+        </p>
+        
+        <div style="margin: 2rem 0;">
+            <a href="{{ url_for('home') }}" class="cta-button" style="margin-right: 1rem;">
+                🏠 Go to Homepage
+            </a>
+            <a href="{{ url_for('contact') }}" class="cta-button">
+                📞 Report Issue
+            </a>
+        </div>
+        
+        <div class="form-container" style="margin-top: 3rem;">
+            <h3>What you can do:</h3>
+            <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+                <li>Refresh the page in a few minutes</li>
+                <li>Check your internet connection</li>
+                <li>Try accessing a different page</li>
+                <li>Contact our support team if the problem persists</li>
+            </ul>
+        </div>
+        
+        <div class="tech-support-grid" style="margin-top: 3rem;">
+            <div class="support-card">
+                <h3>📞 Contact Support</h3>
+                <p>Get immediate assistance</p>
+                <a href="{{ url_for('contact') }}" class="support-link">Contact Us</a>
+            </div>
+            <div class="support-card">
+                <h3>📧 Email Support</h3>
+                <p>Send us an email</p>
+                <a href="mailto:singhaditya.singh22@gmail.com" class="support-link">Send Email</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

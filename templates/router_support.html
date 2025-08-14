@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Router Support - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert router support, installation, configuration, and troubleshooting services for home and business networks.{% endblock %}
+
+{% block canonical_url %}{{ url_for("router_support", _external=True) }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("services") }}">Services</a>
+            <span>/</span>
+            <a href="{{ url_for("network_support") }}">Network Support</a>
+            <span>/</span>
+            <span>Router Support</span>
+        </div>
+        <h1>Router Support & Configuration</h1>
+        <p>Ensuring seamless network connectivity for your home or business.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Our Router Support Services</h2>
+        <p>Aditya Softwares provides comprehensive support for all types of routers, including wireless routers, wired routers, and business-grade network devices. We ensure your network is secure, fast, and reliable.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_router.png") }}" alt="Router Installation">
+                <h3>Installation & Setup</h3>
+                <p>Professional installation and configuration of new routers, including secure Wi-Fi setup and guest networks.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_network.png") }}" alt="Router Troubleshooting">
+                <h3>Troubleshooting & Repair</h3>
+                <p>Diagnosing and fixing common router issues like slow internet, dropped connections, and Wi-Fi signal problems.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="Router Firmware">
+                <h3>Firmware Updates & Security</h3>
+                <p>Updating router firmware, configuring firewalls, and implementing security protocols to protect your network.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_server.png") }}" alt="Network Optimization">
+                <h3>Network Optimization</h3>
+                <p>Optimizing router settings for better performance, range, and managing connected devices.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Common Router Problems We Fix</h2>
+        <div class="problem-solution">
+            <h3>No Internet Connection</h3>
+            <p>Resolving issues where your router is connected but there is no internet access, often due to ISP issues or router configuration.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Slow Wi-Fi Speed</h3>
+            <p>Diagnosing and improving slow wireless speeds, including channel optimization, signal interference, and bandwidth management.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Frequent Disconnections</h3>
+            <p>Fixing intermittent internet drops, Wi-Fi signal loss, and unstable network connections.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Router Setup & Password Issues</h3>
+            <p>Assisting with initial router setup, password recovery, and secure network configuration.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares for Router Support?</h2>
+        <ul>
+            <li><strong>Network Expertise:</strong> Our technicians are highly skilled in all aspects of network devices and protocols.</li>
+            <li><strong>Secure & Reliable Solutions:</strong> We prioritize network security and stability for your peace of mind.</li>
+            <li><strong>Fast On-site & Remote Support:</strong> Flexible support options to get your network running quickly.</li>
+            <li><strong>Comprehensive Configuration:</strong> From basic setup to advanced network optimization, we cover it all.</li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Get Expert Router Support Today!</h2>
+        <p>Ensure your network is always connected and secure with professional router support from Aditya Softwares.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}Software Support Services - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert software support for all types of software, operating systems, and applications. Professional software installation, configuration, and troubleshooting services.{% endblock %}
+
+{% block canonical_url %}/tech-support/software{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("tech_support") }}">Technical Support</a>
+            <span>/</span>
+            <span>Software Support</span>
+        </div>
+        <h1>Software Support Services</h1>
+        <p>Professional software installation, configuration, and troubleshooting</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Comprehensive Software Support</h2>
+        <p>We provide expert support for a wide range of software applications and operating systems. Our software specialists can help you with installation, configuration, troubleshooting, and optimization of all types of software solutions.</p>
+    </div>
+
+    <div class="tech-support-grid">
+        <div class="support-card">
+            <img src="{{ url_for("static", filename="images/futuristic_windows_os.png") }}" alt="Operating System Support">
+            <h3>Operating System Support</h3>
+            <p>Installation, configuration, and troubleshooting for Windows, macOS, and Linux operating systems. We handle OS upgrades, driver installations, and system optimization.</p>
+        </div>
+        <div class="support-card">
+            <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="Application Support">
+            <h3>Application Support</h3>
+            <p>Support for office suites, graphic design software, accounting software, and other business applications. We ensure your software works optimally for your business needs.</p>
+        </div>
+        <div class="support-card">
+            <img src="{{ url_for("static", filename="images/futuristic_ai.png") }}" alt="Custom Software Support">
+            <h3>Custom Software Support</h3>
+            <p>Troubleshooting and maintenance for custom-developed applications and proprietary software. We provide ongoing support for specialized business software.</p>
+        </div>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Software Problem: Application Crashing</h3>
+        <p><strong>Problem:</strong> A specific software application frequently crashes or becomes unresponsive.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Update the application to the latest version</li>
+            <li>Check for conflicting software or background processes</li>
+            <li>Reinstall the application after completely uninstalling it</li>
+            <li>Check system resources (RAM, CPU) and close unnecessary programs</li>
+            <li>Run a system file checker or disk check for corruption</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Software Problem: Slow Performance</h3>
+        <p><strong>Problem:</strong> Software applications are running slowly or taking too long to load.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check available system memory and close unnecessary applications</li>
+            <li>Run disk cleanup and defragmentation utilities</li>
+            <li>Update software to the latest version with performance improvements</li>
+            <li>Disable unnecessary startup programs and background services</li>
+            <li>Consider hardware upgrades if software requirements exceed current specs</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Software Problem: Compatibility Issues</h3>
+        <p><strong>Problem:</strong> Software is not compatible with the current operating system or other applications.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check software compatibility requirements and system specifications</li>
+            <li>Run software in compatibility mode for older applications</li>
+            <li>Update the operating system to support newer software versions</li>
+            <li>Use virtualization or emulation for legacy software requirements</li>
+            <li>Find alternative software solutions that are compatible with current systems</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Software Problem: License and Activation Issues</h3>
+        <p><strong>Problem:</strong> Software license has expired or activation is failing.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Verify license key and ensure it's entered correctly</li>
+            <li>Check internet connection for online activation requirements</li>
+            <li>Contact software vendor for license renewal or support</li>
+            <li>Deactivate and reactivate the software on the current machine</li>
+            <li>Consider upgrading to a newer version with updated licensing</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Software Problem: Data Corruption or Loss</h3>
+        <p><strong>Problem:</strong> Software data files are corrupted or important data has been lost.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Attempt to recover data from automatic backup files or temp folders</li>
+            <li>Use built-in recovery tools or repair functions in the software</li>
+            <li>Restore data from recent backups if available</li>
+            <li>Use specialized data recovery software for deleted or corrupted files</li>
+            <li>Implement regular backup procedures to prevent future data loss</li>
+        </ol>
+    </div>
+
+    <div class="form-container">
+        <h2>Software Categories We Support</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>💼 Business Software</h3>
+                <p>Office suites, accounting software, CRM systems, project management tools, and business productivity applications.</p>
+            </div>
+            <div class="support-card">
+                <h3>🎨 Creative Software</h3>
+                <p>Graphic design tools, video editing software, audio production applications, and creative suite installations.</p>
+            </div>
+            <div class="support-card">
+                <h3>🔧 Development Tools</h3>
+                <p>IDEs, compilers, version control systems, database management tools, and development environment setup.</p>
+            </div>
+            <div class="support-card">
+                <h3>🛡️ Security Software</h3>
+                <p>Antivirus programs, firewalls, VPN clients, encryption tools, and security suite configurations.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Need Software Assistance?</h2>
+        <p>Our software specialists are ready to help you with any software-related challenge. From installation to troubleshooting, we provide comprehensive software support services.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Get Software Support</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Quote</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

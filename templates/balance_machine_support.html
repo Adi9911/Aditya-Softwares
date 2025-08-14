@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Balance Machine Support - Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert support for digital and electronic balance machines, including calibration, repair, and maintenance services.{% endblock %}
+
+{% block canonical_url %}{{ url_for("balance_machine_support", _external=True) }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for("home") }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for("services") }}">Services</a>
+            <span>/</span>
+            <a href="{{ url_for("hardware_support") }}">Hardware Support</a>
+            <span>/</span>
+            <span>Balance Machine Support</span>
+        </div>
+        <h1>Balance Machine Support & Calibration</h1>
+        <p>Precise solutions for your weighing and measurement equipment.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Our Balance Machine Support Services</h2>
+        <p>Aditya Softwares provides specialized support for various types of balance machines, including digital scales, analytical balances, and precision weighing equipment. We ensure your machines provide accurate and reliable measurements.</p>
+
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_balance_machine.png") }}" alt="Balance Machine Calibration">
+                <h3>Calibration & Certification</h3>
+                <p>Accurate calibration services to ensure your balance machines meet industry standards and regulatory requirements.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_hardware.png") }}" alt="Balance Machine Repair">
+                <h3>Troubleshooting & Repair</h3>
+                <p>Diagnosing and fixing common balance machine issues like inaccurate readings, display errors, and power problems.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_software.png") }}" alt="Balance Machine Software">
+                <h3>Software & Connectivity</h3>
+                <p>Resolving software conflicts, configuring data logging, and ensuring seamless connectivity with other systems.</p>
+            </div>
+            <div class="support-card">
+                <img src="{{ url_for("static", filename="images/futuristic_pc.png") }}" alt="Balance Machine Maintenance">
+                <h3>Preventive Maintenance</h3>
+                <p>Regular cleaning, inspection, and adjustment to extend the lifespan and maintain the accuracy of your balance machines.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Common Balance Machine Problems We Fix</h2>
+        <div class="problem-solution">
+            <h3>Inaccurate Readings</h3>
+            <p>Addressing inconsistencies in weight measurements, drift, and calibration errors that affect precision.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Display Errors</h3>
+            <p>Fixing issues with digital displays, including flickering, missing segments, or incorrect readouts.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Connectivity Issues</h3>
+            <p>Troubleshooting problems with connecting balance machines to computers or data acquisition systems via USB, serial, or network.</p>
+        </div>
+        <div class="problem-solution">
+            <h3>Power & Battery Problems</h3>
+            <p>Diagnosing power supply failures, battery charging issues, or machines that fail to turn on.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Aditya Softwares for Balance Machine Support?</h2>
+        <ul>
+            <li><strong>Precision Expertise:</strong> Our technicians are highly trained in the intricacies of various balance machine technologies.</li>
+            <li><strong>Certified Calibration:</strong> We provide calibration services that meet stringent accuracy and compliance standards.</li>
+            <li><strong>Fast & Reliable Service:</strong> We understand the critical role of accurate measurements in your operations.</li>
+            <li><strong>Comprehensive Solutions:</strong> From minor adjustments to major repairs, we offer complete support.</li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <h2>Get Expert Balance Machine Support Today!</h2>
+        <p>Ensure the accuracy and reliability of your weighing equipment with professional support from Aditya Softwares.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for("contact") }}" class="cta-button">Contact Us</a>
+            <a href="{{ url_for("enquiry") }}" class="cta-button" style="margin-left: 1rem;">Request Service</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

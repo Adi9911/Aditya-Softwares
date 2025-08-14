@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+
+{% block title %}Project Enquiry - Get Custom IT Solutions Quote | Aditya Softwares{% endblock %}
+
+{% block meta_description %}Request a custom quote for your IT project. Software development, web design, technical support, and technology solutions tailored to your business needs.{% endblock %}
+
+{% block canonical_url %}/enquiry{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <span>Project Enquiry</span>
+        </div>
+        <h1>Project Enquiry</h1>
+        <p>Get a custom quote for your IT project</p>
+    </div>
+</section>
+
+<section class="container">
+    {% if submitted %}
+        <div class="alert alert-success">
+            <h3>Thank You for Your Enquiry, {{ name }}!</h3>
+            <p>We've received your project enquiry for <strong>{{ service }}</strong>. Our team will review your requirements and get back to you within 24 hours at {{ email }} or {{ mobile }}.</p>
+            {% if email_sent %}
+                <p>✅ Email notification sent successfully to our project team.</p>
+            {% else %}
+                <p>⚠️ There was an issue sending the email notification, but your enquiry has been recorded.</p>
+            {% endif %}
+            <p>Reference: ENQ-{{ mobile[-4:] }}-{{ name[:3].upper() }}</p>
+        </div>
+    {% endif %}
+
+    <div class="form-container">
+        <h2>Tell Us About Your Project</h2>
+        <p>Fill out the form below with your project details. The more information you provide, the better we can understand your needs and provide an accurate quote.</p>
+        
+        <form method="POST" action="{{ url_for('enquiry') }}">
+            <div class="tech-support-grid">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <div class="tech-support-grid">
+                <div class="form-group">
+                    <label for="mobile">Mobile Number *</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="service">Service Required *</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="Web Application">Web Application</option>
+                    <option value="Mobile App Development">Mobile App Development</option>
+                    <option value="Software Development">Custom Software Development</option>
+                    <option value="E-commerce Platform">E-commerce Platform</option>
+                    <option value="Database Development">Database Development</option>
+                    <option value="API Development">API Development</option>
+                    <option value="Cloud Solutions">Cloud Solutions</option>
+                    <option value="AI/ML Implementation">AI/ML Implementation</option>
+                    <option value="Network Setup">Network Setup & Configuration</option>
+                    <option value="IT Infrastructure">IT Infrastructure Setup</option>
+                    <option value="Technical Support">Ongoing Technical Support</option>
+                    <option value="System Integration">System Integration</option>
+                    <option value="Digital Transformation">Digital Transformation</option>
+                    <option value="Other">Other (Please specify in description)</option>
+                </select>
+            </div>
+            
+            <div class="tech-support-grid">
+                <div class="form-group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget" name="budget">
+                        <option value="">Select budget range</option>
+                        <option value="Under ₹25,000">Under ₹25,000</option>
+                        <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+                        <option value="₹1,00,000 - ₹2,50,000">₹1,00,000 - ₹2,50,000</option>
+                        <option value="₹2,50,000 - ₹5,00,000">₹2,50,000 - ₹5,00,000</option>
+                        <option value="₹5,00,000 - ₹10,00,000">₹5,00,000 - ₹10,00,000</option>
+                        <option value="Above ₹10,00,000">Above ₹10,00,000</option>
+                        <option value="Discuss during consultation">Discuss during consultation</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timeline">Project Timeline</label>
+                    <select id="timeline" name="timeline">
+                        <option value="">Select timeline</option>
+                        <option value="ASAP (Rush job)">ASAP (Rush job)</option>
+                        <option value="Within 1 month">Within 1 month</option>
+                        <option value="1-3 months">1-3 months</option>
+                        <option value="3-6 months">3-6 months</option>
+                        <option value="6+ months">6+ months</option>
+                        <option value="Flexible">Flexible</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="description">Project Description *</label>
+                <textarea id="description" name="description" rows="8" required placeholder="Please provide detailed information about your project including:
+- What you want to achieve
+- Key features and functionality required
+- Target audience or users
+- Any specific technologies or platforms
+- Integration requirements
+- Any existing systems or constraints
+- Success criteria and goals"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Enquiry</button>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2>What Happens Next?</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>1. Initial Review</h3>
+                <p>Our team reviews your enquiry within 24 hours and may contact you for clarification if needed.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>2. Consultation Call</h3>
+                <p>We schedule a detailed consultation to understand your requirements and discuss technical aspects.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>3. Proposal & Quote</h3>
+                <p>You receive a comprehensive proposal with timeline, deliverables, and detailed pricing.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>4. Project Kickoff</h3>
+                <p>Once approved, we begin the project with clear milestones and regular progress updates.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Popular Service Packages</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>Basic Website Package</h3>
+                <p><strong>Starting from ₹25,000</strong></p>
+                <ul style="text-align: left; margin: 1rem 0;">
+                    <li>5-page responsive website</li>
+                    <li>Contact form integration</li>
+                    <li>Basic SEO setup</li>
+                    <li>Mobile optimization</li>
+                    <li>1 month support</li>
+                </ul>
+                <p><em>Perfect for small businesses and startups</em></p>
+            </div>
+            
+            <div class="support-card">
+                <h3>E-commerce Platform</h3>
+                <p><strong>Starting from ₹75,000</strong></p>
+                <ul style="text-align: left; margin: 1rem 0;">
+                    <li>Full e-commerce functionality</li>
+                    <li>Payment gateway integration</li>
+                    <li>Inventory management</li>
+                    <li>Admin dashboard</li>
+                    <li>3 months support</li>
+                </ul>
+                <p><em>Ideal for online retail businesses</em></p>
+            </div>
+            
+            <div class="support-card">
+                <h3>Custom Software Solution</h3>
+                <p><strong>Starting from ₹1,50,000</strong></p>
+                <ul style="text-align: left; margin: 1rem 0;">
+                    <li>Custom application development</li>
+                    <li>Database design & integration</li>
+                    <li>User management system</li>
+                    <li>API development</li>
+                    <li>6 months support</li>
+                </ul>
+                <p><em>For businesses with specific requirements</em></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Why Choose Us for Your Project?</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🎯 Tailored Solutions</h3>
+                <p>Every project is customized to meet your specific business needs and objectives.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>⚡ Agile Development</h3>
+                <p>Fast, iterative development with regular updates and client feedback integration.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>🔧 Expert Team</h3>
+                <p>Experienced developers and designers with expertise in latest technologies.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>🛡️ Quality Assurance</h3>
+                <p>Rigorous testing and quality control to ensure bug-free, reliable solutions.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>📞 Ongoing Support</h3>
+                <p>Comprehensive post-launch support and maintenance to ensure continued success.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>💰 Transparent Pricing</h3>
+                <p>Clear, upfront pricing with no hidden costs and flexible payment options.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Technologies We Specialize In</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>Web Technologies</h3>
+                <p>HTML5, CSS3, JavaScript, React, Angular, Vue.js, Node.js, Python, PHP</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>Mobile Development</h3>
+                <p>React Native, Flutter, Android (Java/Kotlin), iOS (Swift), Hybrid Apps</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>Backend & Databases</h3>
+                <p>MySQL, PostgreSQL, MongoDB, Firebase, AWS, Google Cloud, Azure</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>AI & Machine Learning</h3>
+                <p>Python, TensorFlow, PyTorch, Scikit-learn, Natural Language Processing</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Need Help Deciding?</h2>
+        <p>Not sure which service is right for you? Our consultation is free! Contact us to discuss your requirements and get expert advice on the best solution for your business.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for('contact') }}" class="cta-button">Schedule Free Consultation</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

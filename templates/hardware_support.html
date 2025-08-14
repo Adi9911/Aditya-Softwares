@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}Hardware Support Services - PC, Laptop, Components | Aditya Softwares{% endblock %}
+
+{% block meta_description %}Expert hardware support for PC, laptop, computer components, motherboards, processors, RAM, hard drives, and all computer hardware troubleshooting and repair services.{% endblock %}
+
+{% block canonical_url %}/tech-support/hardware{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <a href="{{ url_for('tech_support') }}">Technical Support</a>
+            <span>/</span>
+            <span>Hardware Support</span>
+        </div>
+        <h1>Hardware Support Services</h1>
+        <p>Expert hardware troubleshooting and repair for all computer systems</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="form-container">
+        <h2>Hardware Support Categories</h2>
+        <p>Choose the specific hardware category you need support with. Our certified technicians have expertise in all computer hardware components.</p>
+    </div>
+
+    <div class="tech-support-grid">
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_pc.png') }}" alt="PC Hardware Support">
+            <h3>Desktop PC Support</h3>
+            <p>Complete desktop computer hardware support including motherboard, CPU, RAM, storage, and component upgrades.</p>
+            <a href="{{ url_for('pc_support') }}" class="support-link">PC Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_laptop.png') }}" alt="Laptop Hardware Support">
+            <h3>Laptop Support</h3>
+            <p>Professional laptop hardware repair, screen replacement, keyboard repair, battery replacement, and performance upgrades.</p>
+            <a href="{{ url_for('laptop_support') }}" class="support-link">Laptop Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_scanner.png') }}" alt="Scanner Support">
+            <h3>Scanner Support</h3>
+            <p>Expert support for document scanners, flatbed scanners, and all scanning device troubleshooting.</p>
+            <a href="{{ url_for('scanner_support') }}" class="support-link">Scanner Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_pos_printer.png') }}" alt="POS Printer Support">
+            <h3>POS Printer Support</h3>
+            <p>Specialized support for POS printers, receipt printers, and point-of-sale hardware systems.</p>
+            <a href="{{ url_for('pos_printer_support') }}" class="support-link">POS Printer Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_balance_machine.png') }}" alt="Balance Machine Support">
+            <h3>Balance Machine Support</h3>
+            <p>Professional support for digital scales, balance machines, and weighing equipment calibration and repair.</p>
+            <a href="{{ url_for('balance_machine_support') }}" class="support-link">Balance Machine Support</a>
+        </div>
+
+        <div class="support-card">
+            <img src="{{ url_for('static', filename='images/futuristic_hardware.png') }}" alt="Component Support">
+            <h3>Component Support</h3>
+            <p>Individual component support for processors, graphics cards, power supplies, and all computer parts.</p>
+            <a href="{{ url_for('hardware_support') }}" class="support-link">Component Support</a>
+        </div>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Hardware Problem: Computer Won't Start</h3>
+        <p><strong>Problem:</strong> Desktop computer or laptop fails to power on or boot properly.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Check all power connections and ensure the power cable is securely connected</li>
+            <li>Test the power supply unit (PSU) with a multimeter or PSU tester</li>
+            <li>Remove and reseat RAM modules, testing one stick at a time</li>
+            <li>Check for loose internal connections, especially motherboard power connectors</li>
+            <li>Test with minimal hardware configuration to isolate the faulty component</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Hardware Problem: Overheating Issues</h3>
+        <p><strong>Problem:</strong> Computer shuts down unexpectedly or runs very slowly due to overheating.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Clean all dust from CPU cooler, case fans, and air vents using compressed air</li>
+            <li>Check thermal paste application on CPU and reapply if necessary</li>
+            <li>Verify all cooling fans are functioning properly and replace if needed</li>
+            <li>Ensure proper airflow through the case with intake and exhaust fans</li>
+            <li>Monitor temperatures using software tools and adjust fan curves if needed</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Hardware Problem: Hard Drive Failure</h3>
+        <p><strong>Problem:</strong> Hard drive making unusual noises, slow performance, or data corruption.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Immediately backup important data to prevent complete data loss</li>
+            <li>Run disk health diagnostics using manufacturer's tools or SMART monitoring</li>
+            <li>Check and secure all SATA or power connections to the drive</li>
+            <li>Test the drive in another system to confirm hardware failure</li>
+            <li>Replace the failing drive and restore data from backup or recovery services</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Hardware Problem: RAM Memory Errors</h3>
+        <p><strong>Problem:</strong> System crashes, blue screens, or random application errors indicating memory issues.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Run Windows Memory Diagnostic or MemTest86 to identify faulty RAM</li>
+            <li>Test each RAM stick individually to isolate the problematic module</li>
+            <li>Clean RAM contacts with isopropyl alcohol and reseat in different slots</li>
+            <li>Check motherboard compatibility and ensure RAM is running at correct speeds</li>
+            <li>Replace faulty RAM modules with compatible memory sticks</li>
+        </ol>
+    </div>
+
+    <div class="problem-solution">
+        <h3>Common Hardware Problem: Graphics Card Issues</h3>
+        <p><strong>Problem:</strong> Display artifacts, crashes during gaming, or no video output from graphics card.</p>
+        <p><strong>Solution:</strong></p>
+        <ol class="solution-steps">
+            <li>Update graphics drivers to the latest version from manufacturer's website</li>
+            <li>Check power supply connections to the graphics card and ensure adequate wattage</li>
+            <li>Clean graphics card fans and heatsink to prevent overheating</li>
+            <li>Test the card in another system or try a different graphics card</li>
+            <li>Check for physical damage and consider professional repair or replacement</li>
+        </ol>
+    </div>
+
+    <div class="form-container">
+        <h2>Hardware Diagnostic Services</h2>
+        <p>Our comprehensive hardware diagnostic services help identify issues quickly and accurately. We use professional-grade tools and testing equipment to ensure precise diagnosis.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for('contact') }}" class="cta-button">Schedule Hardware Diagnostic</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

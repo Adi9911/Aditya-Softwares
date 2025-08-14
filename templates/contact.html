@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Aditya Softwares - Get Professional IT Support & Technical Services{% endblock %}
+
+{% block meta_description %}Contact Aditya Softwares for professional IT support, technical services, and technology solutions. Get in touch for immediate assistance or project consultation.{% endblock %}
+
+{% block canonical_url %}/contact{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <span>Contact</span>
+        </div>
+        <h1>Contact Us</h1>
+        <p>Get in touch for professional IT support and technical services</p>
+    </div>
+</section>
+
+<section class="container">
+    {% if submitted %}
+        <div class="alert alert-success">
+            <h3>Thank You, {{ name }}!</h3>
+            <p>Your message has been received successfully. We'll get back to you within 24 hours at {{ email }}.</p>
+            {% if email_sent %}
+                <p>✅ Email notification sent successfully.</p>
+            {% else %}
+                <p>⚠️ There was an issue sending the email notification, but your message has been recorded.</p>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="tech-support-grid">
+        <div class="form-container">
+            <h2>Send Us a Message</h2>
+            <p>Have a question or need technical support? Fill out the form below and we'll respond promptly.</p>
+            
+            <form method="POST" action="{{ url_for('contact') }}">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="Technical Support">Technical Support</option>
+                        <option value="Hardware Issue">Hardware Issue</option>
+                        <option value="Software Problem">Software Problem</option>
+                        <option value="Network Support">Network Support</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Project Quote">Project Quote</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Please describe your issue or inquiry in detail..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Contact Information</h2>
+            <div class="support-card">
+                <h3>📧 Email Support</h3>
+                <p><strong>Primary:</strong> singhaditya.singh22@gmail.com</p>
+                <p>Response time: Within 24 hours</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>📱 Mobile Support</h3>
+                <p><strong>Phone:</strong> +91-9911607281</p>
+                <p>Available during business hours for urgent support</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>🌐 Website</h3>
+                <p><strong>Live Site:</strong> aditya-softwares-website.onrender.com</p>
+                <p>Available 24/7 for information and support requests</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>⏰ Business Hours</h3>
+                <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+                <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
+                <p><strong>Sunday:</strong> Emergency support only</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>🚨 Emergency Support</h3>
+                <p>For critical technical issues that require immediate attention</p>
+                <p>Available 24/7 for emergency situations</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Quick Support Options</h2>
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🔧 Technical Support</h3>
+                <p>Immediate help with hardware, software, and system issues</p>
+                <a href="{{ url_for('tech_support') }}" class="support-link">Get Tech Support</a>
+            </div>
+            
+            <div class="support-card">
+                <h3>🌐 Network Issues</h3>
+                <p>Router, WiFi, and network connectivity problems</p>
+                <a href="{{ url_for('network_support') }}" class="support-link">Network Support</a>
+            </div>
+            
+            <div class="support-card">
+                <h3>💼 Project Inquiry</h3>
+                <p>Custom software development and IT project quotes</p>
+                <a href="{{ url_for('enquiry') }}" class="support-link">Request Quote</a>
+            </div>
+            
+            <div class="support-card">
+                <h3>📋 Service Information</h3>
+                <p>Learn about our complete range of IT services</p>
+                <a href="{{ url_for('services') }}" class="support-link">View Services</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="problem-solution">
+            <h3>How quickly can you respond to technical support requests?</h3>
+            <p>We typically respond to all support requests within 24 hours during business days. For emergency issues, we offer same-day response and can provide immediate assistance for critical problems.</p>
+        </div>
+        
+        <div class="problem-solution">
+            <h3>Do you provide on-site technical support?</h3>
+            <p>Yes, we offer on-site support for complex hardware issues, network setup, and situations that require physical presence. On-site services are available by appointment and may include additional charges based on location and complexity.</p>
+        </div>
+        
+        <div class="problem-solution">
+            <h3>What types of payment do you accept?</h3>
+            <p>We accept various payment methods including bank transfers, online payments, and cash for on-site services. Payment terms are discussed during project consultation and clearly outlined in our service agreements.</p>
+        </div>
+        
+        <div class="problem-solution">
+            <h3>Do you offer warranties on your services?</h3>
+            <p>Yes, we provide warranties on all our services. Hardware repairs come with parts and labor warranty, software development includes bug fixes and minor modifications, and technical support includes follow-up assistance to ensure issues are fully resolved.</p>
+        </div>
+        
+        <div class="problem-solution">
+            <h3>Can you help with both Windows and Mac systems?</h3>
+            <p>Absolutely! Our technicians are experienced with Windows, macOS, and Linux systems. We provide comprehensive support for all major operating systems and can help with cross-platform compatibility issues.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Service Areas</h2>
+        <p>We provide services across multiple locations and offer remote support worldwide. Our primary service areas include:</p>
+        
+        <div class="tech-support-grid">
+            <div class="support-card">
+                <h3>🏢 On-Site Services</h3>
+                <p>Local area on-site support for hardware installation, network setup, and complex troubleshooting that requires physical presence.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>💻 Remote Support</h3>
+                <p>Worldwide remote assistance for software issues, system optimization, and technical consultation via secure remote access.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>☁️ Cloud Services</h3>
+                <p>Global cloud-based solutions and support for businesses looking to modernize their IT infrastructure.</p>
+            </div>
+            
+            <div class="support-card">
+                <h3>📱 Mobile Support</h3>
+                <p>Emergency mobile support for critical issues that require immediate attention outside regular business hours.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
